@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="LFPy 1.1.0 documentation" href="index.html" />
-    <link rel="next" title="Contributors" href="contributors.html" />
+    <link rel="next" title="Module LFPy" href="classes.html" />
     <link rel="prev" title="LFPy Tutorial" href="tutorial.html" />
  
 <script type="text/javascript">
@@ -46,7 +46,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="contributors.html" title="Contributors"
+          <a href="classes.html" title="Module LFPy"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="tutorial.html" title="LFPy Tutorial"
@@ -74,12 +74,12 @@
 <li><code class="docutils literal"><span class="pre">axon*[]</span></code> for axonal sections</li>
 </ul>
 </li>
-<li>Sections must be defined as SectionList (therefore use <code class="docutils literal"><span class="pre">soma[1]</span></code>, not <code class="docutils literal"><span class="pre">soma</span></code>)</li>
+<li>Sections must be defined as types Section or SectionList (as <code class="docutils literal"><span class="pre">soma[1]</span></code> or <code class="docutils literal"><span class="pre">soma</span></code>)</li>
 </ul>
 <p>Also the morphologies exported from the NEURON simulator
 (for example using Cell Builder -&gt; Export) should
-work with LFPy, but often <code class="docutils literal"><span class="pre">create</span> <span class="pre">soma</span></code> must be corrected to
-<code class="docutils literal"><span class="pre">create</span> <span class="pre">soma[1]</span></code> in those files.</p>
+work with LFPy, but some times <code class="docutils literal"><span class="pre">create</span> <span class="pre">soma</span></code> must be corrected to
+<code class="docutils literal"><span class="pre">create</span> <span class="pre">soma[1]</span></code> directly in the files.</p>
 <p>NEURON convention for creating morphology files in <code class="docutils literal"><span class="pre">hoc</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre>/* ----------------------------------------------------
 example_morphology.hoc
@@ -184,6 +184,24 @@ The units in LFPy for given quantities are:</p>
 <p>Note: resistance, conductance and capacitance are usually specific values, i.e per membrane area (lowercase r_m, g, c_m)
 Depending on the mechanism files, some may use different units altogether, but this should be taken care of internally by NEURON.</p>
 </div>
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<p>LFPy was developed by:</p>
+<ul class="simple">
+<li>Henrik Lindén <a class="reference external" href="https://lindenh.wordpress.com">https://lindenh.wordpress.com</a></li>
+<li>Espen Hagen <a class="reference external" href="http://www.fz-juelich.de/SharedDocs/Personen/INM/INM-6/EN/Hagen_Espen.html?nn=724694">http://www.fz-juelich.de/SharedDocs/Personen/INM/INM-6/EN/Hagen_Espen.html?nn=724694</a></li>
+<li>Szymon Łęski <a class="reference external" href="http://www.neuroinf.pl/Members/szleski">http://www.neuroinf.pl/Members/szleski</a></li>
+<li>Eivind Norheim</li>
+<li>Klas H. Pettersen <a class="reference external" href="http://arken.umb.no/~klaspe/">http://arken.umb.no/~klaspe/</a></li>
+<li>Gaute T. Einevoll <a class="reference external" href="http://arken.umb.no/~gautei/index_english.html">http://arken.umb.no/~gautei/index_english.html</a></li>
+</ul>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>If you want to contact us with questions, bugs and comments,
+you can send us an email to either <a class="reference external" href="mailto:e&#46;hagen&#37;&#52;&#48;fz-juelich&#46;de?Subject=LFPy-Questions/Comments">Espen</a> or <a class="reference external" href="mailto:helinden&#37;&#52;&#48;kth&#46;se?Subject=LFPy-Question/Comments">Henrik</a>.
+We are of course happy to receive feedback of any kind.</p>
+</div>
 </div>
 
 
@@ -201,6 +219,8 @@ Depending on the mechanism files, some may use different units altogether, but t
 </li>
 <li><a class="reference internal" href="#using-neuron-mechanisms">Using NEURON mechanisms</a></li>
 <li><a class="reference internal" href="#units">Units</a></li>
+<li><a class="reference internal" href="#contributors">Contributors</a></li>
+<li><a class="reference internal" href="#contact">Contact</a></li>
 </ul>
 </li>
 </ul>
@@ -209,12 +229,12 @@ Depending on the mechanism files, some may use different units altogether, but t
   <p class="topless"><a href="tutorial.html"
                         title="previous chapter">LFPy Tutorial</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="contributors.html"
-                        title="next chapter">Contributors</a></p>
+  <p class="topless"><a href="classes.html"
+                        title="next chapter">Module <code class="docutils literal"><span class="pre">LFPy</span></code></a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/using.txt"
+      <li><a href="_sources/additional.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -245,7 +265,7 @@ Depending on the mechanism files, some may use different units altogether, but t
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="contributors.html" title="Contributors"
+          <a href="classes.html" title="Module LFPy"
              >next</a> |</li>
         <li class="right" >
           <a href="tutorial.html" title="LFPy Tutorial"
