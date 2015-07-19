@@ -268,26 +268,26 @@ giving the trajectory of each section</p>
 </pre></div>
 </div>
 <p>The most efficient way of using this would be something like</p>
-<div class="highlight-python"><div class="highlight"><pre>from matplotlib.collections import PolyCollection
-import matplotlib.pyplot as plt
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="kn">import</span> <span class="n">PolyCollection</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
-cell = LFPy.Cell(morphology=&#39;PATH/TO/MORPHOLOGY&#39;)
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s">&#39;PATH/TO/MORPHOLOGY&#39;</span><span class="p">)</span>
 
-zips = []
-for x, z in cell.get_idx_polygons(projection=(&#39;x&#39;, &#39;z&#39;):
-    zips.append(zip(x, z))
+<span class="n">zips</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">)):</span>
+    <span class="n">zips</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
 
-polycol = PolyCollection(zips,
-                         edgecolors=&#39;none&#39;,
-                         facecolors=&#39;gray&#39;)
+<span class="n">polycol</span> <span class="o">=</span> <span class="n">PolyCollection</span><span class="p">(</span><span class="n">zips</span><span class="p">,</span>
+                         <span class="n">edgecolors</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+                         <span class="n">facecolors</span><span class="o">=</span><span class="s">&#39;gray&#39;</span><span class="p">)</span>
 
-fig = plt.figure()
-ax = fig.add_subplot(111)
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
-ax.add_collection(polycol)
-ax.axis(ax.axis(&#39;equal&#39;))
+<span class="n">ax</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">polycol</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;equal&#39;</span><span class="p">))</span>
 
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -326,7 +326,7 @@ of each section that can be plotted using PolyCollection</p>
 <span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s">&#39;PATH/TO/MORPHOLOGY&#39;</span><span class="p">)</span>
 
 <span class="n">zips</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">():</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">)):</span>
     <span class="n">zips</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
 
 <span class="n">polycol</span> <span class="o">=</span> <span class="n">PolyCollection</span><span class="p">(</span><span class="n">zips</span><span class="p">,</span>
