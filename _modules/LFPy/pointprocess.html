@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LFPy.pointprocess &mdash; LFPy 1.1.0 documentation</title>
+    <title>LFPy.pointprocess &mdash; LFPy 1.1.1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.1.0',
+        VERSION:     '1.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.0 documentation" href="../../index.html" />
+    <link rel="top" title="LFPy 1.1.1 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" />
  
 <script type="text/javascript">
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
       </ul>
     </div>  
@@ -105,8 +105,8 @@
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">xmid</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">ymid</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">zmid</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">]</span>
-        </div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">zmid</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">]</span></div></div>
+        
 <div class="viewcode-block" id="Synapse"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse">[docs]</a><span class="k">class</span> <span class="nc">Synapse</span><span class="p">(</span><span class="n">PointProcess</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    The synapse class, pointprocesses that spawn membrane currents.</span>
@@ -170,22 +170,22 @@
 <div class="viewcode-block" id="Synapse.set_spike_times"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.set_spike_times">[docs]</a>    <span class="k">def</span> <span class="nf">set_spike_times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sptimes</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
         <span class="sd">&#39;&#39;&#39;Set the spike times&#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sptimes</span> <span class="o">=</span> <span class="n">sptimes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">sptimeslist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sptimes</span><span class="p">)</span>
-        </div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">sptimeslist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sptimes</span><span class="p">)</span></div>
+        
 <div class="viewcode-block" id="Synapse.collect_current"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.collect_current">[docs]</a>    <span class="k">def</span> <span class="nf">collect_current</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Collect synapse current&#39;&#39;&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">synireclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;cell.synireclist deleted from consequtive runs&#39;</span><span class="p">)</span>
-    </div>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;cell.synireclist deleted from consequtive runs&#39;</span><span class="p">)</span></div>
+    
 <div class="viewcode-block" id="Synapse.collect_potential"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.collect_potential">[docs]</a>    <span class="k">def</span> <span class="nf">collect_potential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Collect membrane potential of segment with synapse&#39;&#39;&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">synvreclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;cell.synvreclist deleted from consequtive runs&#39;</span><span class="p">)</span>
-        </div></div>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;cell.synvreclist deleted from consequtive runs&#39;</span><span class="p">)</span></div></div>
+        
 <div class="viewcode-block" id="StimIntElectrode"><a class="viewcode-back" href="../../classes.html#LFPy.StimIntElectrode">[docs]</a><span class="k">class</span> <span class="nc">StimIntElectrode</span><span class="p">(</span><span class="n">PointProcess</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Class for NEURON point processes, ie VClamp, SEClamp and ICLamp,</span>
@@ -273,14 +273,14 @@
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Fetch electrode current from recorder list</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">stimireclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span>
-    </div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">stimireclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span></div>
+    
 <div class="viewcode-block" id="StimIntElectrode.collect_potential"><a class="viewcode-back" href="../../classes.html#LFPy.StimIntElectrode.collect_potential">[docs]</a>    <span class="k">def</span> <span class="nf">collect_potential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Collect membrane potential of segment with PointProcess</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">synvreclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span>
-</div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">synvreclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span></div></div>
+
 <span class="k">class</span> <span class="nc">PointProcessPlayInSoma</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Class implementation of Eivind&#39;s playback alghorithm</span>
@@ -393,14 +393,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking

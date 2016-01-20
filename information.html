@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Download LFPy &mdash; LFPy 1.1.0 documentation</title>
+    <title>Download LFPy &mdash; LFPy 1.1.1 documentation</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1.0',
+        VERSION:     '1.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.0 documentation" href="index.html" />
+    <link rel="top" title="LFPy 1.1.1 documentation" href="index.html" />
     <link rel="next" title="LFPy Tutorial" href="tutorial.html" />
     <link rel="prev" title="LFPy Homepage" href="index.html" />
  
@@ -51,7 +51,7 @@
         <li class="right" >
           <a href="index.html" title="LFPy Homepage"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -118,6 +118,10 @@ and known to fail with version 0.11. LFPy works without Cython, but simulations 
 <div class="highlight-python"><div class="highlight"><pre>sudo pip install LFPy
 </pre></div>
 </div>
+<p>Upgrading LFPy from the Python package index (without attempts at upgrading dependencies):</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install --upgrade --no-deps LFPy
+</pre></div>
+</div>
 </li>
 <li><p class="first">From the Python Package Index with only local access using easy_install</p>
 <div class="highlight-python"><div class="highlight"><pre>easy_install --user LFPy
@@ -142,7 +146,7 @@ cd LFPy
 </pre></div>
 </div>
 </li>
-<li><p class="first">If you only want to have LFPy in one place, you can add this working folder to your $PYTHONPATH, and just compile the Cython extensions;</p>
+<li><p class="first">If you only want to have LFPy in one place, you can add this working folder to your $PYTHONPATH, and just compile the Cython extensions inplace;</p>
 <div class="highlight-python"><div class="highlight"><pre>python setup.py build_ext -i
 </pre></div>
 </div>
@@ -163,7 +167,7 @@ how to set up a working Python environment using Anaconda with the standard pre-
 <p>By far the simplest solution relying on no source code compilation.</p>
 <ol class="arabic simple">
 <li>Download and install Anaconda using the 64-bit Linux installer script from <a class="reference external" href="http://continuum.io/downloads">http://continuum.io/downloads</a></li>
-<li>Download and install the 64-bit Mac .dmg file with NEURON from <a class="reference external" href="http://www.neuron.yale.edu/neuron/download">http://www.neuron.yale.edu/neuron/download</a></li>
+<li>Download and install the 64-bit Debian/Ubuntu .deb file with NEURON from <a class="reference external" href="http://www.neuron.yale.edu/neuron/download">http://www.neuron.yale.edu/neuron/download</a></li>
 <li>Edit your .bashrc or similar file located in the $HOME folder, e.g., by calling in the Terminal.app &#8220;gedit $HOME/.bashrc&#8221;, to include the lines:</li>
 </ol>
 <div class="highlight-python"><div class="highlight"><pre># make NEURON python module available to Anaconda python
@@ -195,7 +199,7 @@ See http://www.neuron.yale.edu/neuron/credits
 <p>By far the simplest solution relying on no source code compilation.</p>
 <ol class="arabic simple">
 <li>Download and install Anaconda using the 64-bit graphical installer from <a class="reference external" href="http://continuum.io/downloads">http://continuum.io/downloads</a></li>
-<li>Download and install the 64-bit Debian/Ubuntu .deb file with NEURON from <a class="reference external" href="http://www.neuron.yale.edu/neuron/download">http://www.neuron.yale.edu/neuron/download</a></li>
+<li>Download and install the 64-bit Mac .dmg file with NEURON from <a class="reference external" href="http://www.neuron.yale.edu/neuron/download">http://www.neuron.yale.edu/neuron/download</a></li>
 <li>Edit your .bash_profile or similar file located in the $HOME folder, e.g., by calling in the Terminal.app &#8220;open -t $HOME/.bash_profile&#8221;, to include the lines:</li>
 </ol>
 <div class="highlight-python"><div class="highlight"><pre># added by Anaconda 2.0.1 installer
@@ -494,13 +498,13 @@ For this particular example, only a pdf image file is generated, &#8220;nsg_exam
         <li class="right" >
           <a href="index.html" title="LFPy Homepage"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module LFPy &mdash; LFPy 1.1.0 documentation</title>
+    <title>Module LFPy &mdash; LFPy 1.1.1 documentation</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1.0',
+        VERSION:     '1.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.0 documentation" href="index.html" />
+    <link rel="top" title="LFPy 1.1.1 documentation" href="index.html" />
     <link rel="prev" title="Notes on LFPy" href="additional.html" />
  
 <script type="text/javascript">
@@ -47,7 +47,7 @@
         <li class="right" >
           <a href="additional.html" title="Notes on LFPy"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -902,7 +902,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.</p>
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_choose">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_choose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_choose" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_choose</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em>, <em>method='linesource'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_choose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_choose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine which method to use, line-source for soma default</p>
 <p>kwargs:</p>
 <div class="highlight-python"><div class="highlight"><pre>cell: LFPy.Cell or LFPy.TemplateCell instance
@@ -921,7 +921,7 @@ method=[&#39;linesource&#39;]/&#39;pointsource&#39;/&#39;som_as_point&#39;
 
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_linesource">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_linesource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_linesource" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_linesource</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_linesource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_linesource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate electric field potential using the line-source method, all
 compartments treated as line sources, even soma.</p>
 <p>kwargs:</p>
@@ -939,7 +939,7 @@ t_indices : [None]/np.ndarray, calculate LFP at specific timesteps
 
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_pointsource">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_pointsource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_pointsource" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_pointsource</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_pointsource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_pointsource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate local field potentials using the point-source equation on all
 compartments</p>
 <p>kwargs:</p>
@@ -950,14 +950,14 @@ z : double, extracellular position, z-axis
 sigma : double, extracellular conductivity
 r_limit : [None]/float/np.ndarray: minimum distance to source current
 timestep : [None]/int, calculate LFP at this timestep
-t_indices : [None]/np.ndarray, calculate LFP at specific timesteps    
+t_indices : [None]/np.ndarray, calculate LFP at specific timesteps
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_som_as_point">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_som_as_point</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_som_as_point" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_som_as_point</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_som_as_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_som_as_point" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate electric field potential using the line-source method,
 soma is treated as point/sphere source</p>
 <p>kwargs:</p>
@@ -1137,13 +1137,13 @@ GNU General Public License for more details.</p>
         <li class="right" >
           <a href="additional.html" title="Notes on LFPy"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LFPy.cell &mdash; LFPy 1.1.0 documentation</title>
+    <title>LFPy.cell &mdash; LFPy 1.1.1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.1.0',
+        VERSION:     '1.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.0 documentation" href="../../index.html" />
+    <link rel="top" title="LFPy 1.1.1 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" />
  
 <script type="text/javascript">
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
       </ul>
     </div>  
@@ -551,8 +551,8 @@
 
                 <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synlist</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>
-</div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synlist</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span></div>
+
 <div class="viewcode-block" id="Cell.set_point_process"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.set_point_process">[docs]</a>    <span class="k">def</span> <span class="nf">set_point_process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">pptype</span><span class="p">,</span> <span class="n">record_current</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Insert pptype-electrode type pointprocess on segment numbered</span>
@@ -603,8 +603,8 @@
                 
                 <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimlist</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>
-    </div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimlist</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span></div>
+    
     <span class="k">def</span> <span class="nf">_collect_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Collects x, y, z-coordinates from NEURON&#39;&#39;&#39;</span>
         <span class="c">#None-type some attributes if they do not exis:</span>
@@ -696,9 +696,9 @@
 
         <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_idx</span><span class="p">(</span><span class="n">seclist</span><span class="p">)</span>
         <span class="n">sel_z_idx</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zmid</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">z_min</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zmid</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">z_max</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">totnsegs</span><span class="p">)[</span><span class="n">idx</span><span class="p">][</span><span class="n">sel_z_idx</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">totnsegs</span><span class="p">)[</span><span class="n">idx</span><span class="p">][</span><span class="n">sel_z_idx</span><span class="p">]</span></div>
                             
-                </div>
+                
 <div class="viewcode-block" id="Cell.get_closest_idx"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_closest_idx">[docs]</a>    <span class="k">def</span> <span class="nf">get_closest_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="s">&#39;allsec&#39;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Get the index number of a segment in specified section which </span>
 <span class="sd">        midpoint is closest to the coordinates defined by the user</span>
@@ -716,8 +716,8 @@
         
         <span class="n">mindist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dist</span><span class="p">))</span>
         
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">idx</span><span class="p">[</span><span class="n">mindist</span><span class="p">])</span>
-    </div>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">idx</span><span class="p">[</span><span class="n">mindist</span><span class="p">])</span></div>
+    
 <div class="viewcode-block" id="Cell.get_rand_idx_area_norm"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_rand_idx_area_norm">[docs]</a>    <span class="k">def</span> <span class="nf">get_rand_idx_area_norm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="s">&#39;allsec&#39;</span><span class="p">,</span> <span class="n">nidx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
                                <span class="n">z_min</span><span class="o">=-</span><span class="mi">10000</span><span class="p">,</span> <span class="n">z_max</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Return nidx segment indices in section with random probability</span>
@@ -744,8 +744,8 @@
             <span class="n">area</span> <span class="o">/=</span> <span class="n">area</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
             <span class="n">idx</span> <span class="o">=</span> <span class="n">alias_method</span><span class="p">(</span><span class="n">poss_idx</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">nidx</span><span class="p">)</span>
 
-            <span class="k">return</span> <span class="n">idx</span>
-    </div>
+            <span class="k">return</span> <span class="n">idx</span></div>
+    
 <div class="viewcode-block" id="Cell.simulate"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.simulate">[docs]</a>    <span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">electrode</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">rec_imem</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">rec_vmem</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
                  <span class="n">rec_ipas</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">rec_icap</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
                  <span class="n">rec_isyn</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">rec_vmemsyn</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">rec_istim</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
@@ -826,8 +826,8 @@
         <span class="k">if</span> <span class="n">rec_istim</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_collect_istim</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rec_variables</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_collect_rec_variables</span><span class="p">(</span><span class="n">rec_variables</span><span class="p">)</span>
-</div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_collect_rec_variables</span><span class="p">(</span><span class="n">rec_variables</span><span class="p">)</span></div>
+
     <span class="k">def</span> <span class="nf">_collect_tvec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Set the tvec to be a monotonically increasing numpy array after sim.</span>
@@ -1063,10 +1063,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">zend</span> <span class="o">-=</span> <span class="n">diffz</span>
         
         <span class="bp">self</span><span class="o">.</span><span class="n">_calc_midpoints</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_update_synapse_positions</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_synapse_positions</span><span class="p">()</span></div>
         
 
-    </div>
+    
 <div class="viewcode-block" id="Cell.strip_hoc_objects"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.strip_hoc_objects">[docs]</a>    <span class="k">def</span> <span class="nf">strip_hoc_objects</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Destroy any NEURON hoc objects in the cell object</span>
@@ -1075,8 +1075,8 @@
             <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">varname</span><span class="p">))</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">List</span><span class="p">()):</span>
                 <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
-                    <span class="k">print</span><span class="p">((</span><span class="s">&#39;None-typed </span><span class="si">%s</span><span class="s"> in cell instance&#39;</span> <span class="o">%</span> <span class="n">varname</span><span class="p">))</span>
-        </div>
+                    <span class="k">print</span><span class="p">((</span><span class="s">&#39;None-typed </span><span class="si">%s</span><span class="s"> in cell instance&#39;</span> <span class="o">%</span> <span class="n">varname</span><span class="p">))</span></div>
+        
 <div class="viewcode-block" id="Cell.cellpickler"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.cellpickler">[docs]</a>    <span class="k">def</span> <span class="nf">cellpickler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Save data in cell to filename, using cPickle. It will however destroy</span>
@@ -1105,8 +1105,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">strip_hoc_objects</span><span class="p">()</span>
         <span class="n">filen</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filen</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">filen</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    </div>
+        <span class="n">filen</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+    
     <span class="k">def</span> <span class="nf">_update_synapse_positions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Update synapse positions after rotation of morphology</span>
@@ -1186,9 +1186,9 @@
 
         <span class="c">#rotate the pt3d geometry accordingly</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pt3d</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;x3d&#39;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_set_pt3d_rotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_pt3d_rotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span></div>
 
-    </div>
+    
 <div class="viewcode-block" id="Cell.chiral_morphology"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.chiral_morphology">[docs]</a>    <span class="k">def</span> <span class="nf">chiral_morphology</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s">&#39;x&#39;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Mirror the morphology around given axis, (default x-axis),</span>
@@ -1219,8 +1219,8 @@
             <span class="k">print</span><span class="p">((</span><span class="s">&#39;morphology mirrored across </span><span class="si">%s</span><span class="s">-axis&#39;</span> <span class="o">%</span> <span class="n">axis</span><span class="p">))</span>
         
         <span class="c">#set the proper 3D positions</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_real_positions</span><span class="p">(</span><span class="n">rel_start</span><span class="p">,</span> <span class="n">rel_end</span><span class="p">)</span>
-        </div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_real_positions</span><span class="p">(</span><span class="n">rel_start</span><span class="p">,</span> <span class="n">rel_end</span><span class="p">)</span></div>
+        
     <span class="k">def</span> <span class="nf">_squeeze_me_macaroni</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Reducing the dimensions of the morphology matrices from 3D-&gt;1D</span>
@@ -1283,8 +1283,8 @@
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="n">section</span><span class="p">,</span> <span class="n">z_min</span><span class="o">=</span><span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">=</span> <span class="n">z_max</span><span class="p">)</span>
         <span class="n">prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">prob</span>
-</div>
+        <span class="k">return</span> <span class="n">prob</span></div>
+
 <div class="viewcode-block" id="Cell.get_rand_prob_area_norm_from_idx"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_rand_prob_area_norm_from_idx">[docs]</a>    <span class="k">def</span> <span class="nf">get_rand_prob_area_norm_from_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">]),</span> 
                                 <span class="n">z_min</span><span class="o">=-</span><span class="mi">10000</span><span class="p">,</span> <span class="n">z_max</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
@@ -1302,8 +1302,8 @@
 
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">prob</span>
-    </div>
+        <span class="k">return</span> <span class="n">prob</span></div>
+    
 <div class="viewcode-block" id="Cell.get_intersegment_vector"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_intersegment_vector">[docs]</a>    <span class="k">def</span> <span class="nf">get_intersegment_vector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">idx1</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the distance between midpoints of two segments with index</span>
@@ -1326,8 +1326,8 @@
             <span class="k">return</span> <span class="n">vector</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="n">ERRMSG</span> <span class="o">=</span> <span class="s">&#39;idx0 and idx1 must be ints on [0, </span><span class="si">%i</span><span class="s">]&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">totnsegs</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">ERRMSG</span><span class="p">)</span>
-        </div>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">ERRMSG</span><span class="p">)</span></div>
+        
 <div class="viewcode-block" id="Cell.get_intersegment_distance"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_intersegment_distance">[docs]</a>    <span class="k">def</span> <span class="nf">get_intersegment_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">idx1</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the Euclidean distance between midpoints of two segments </span>
@@ -1338,9 +1338,9 @@
             <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">vector</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="n">ERRMSG</span> <span class="o">=</span> <span class="s">&#39;idx0 and idx1 must be ints on [0, </span><span class="si">%i</span><span class="s">]&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">totnsegs</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">ERRMSG</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">ERRMSG</span><span class="p">)</span></div>
     
-    </div>
+    
 <div class="viewcode-block" id="Cell.get_idx_children"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_idx_children">[docs]</a>    <span class="k">def</span> <span class="nf">get_idx_children</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="s">&quot;soma[0]&quot;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Get the idx of parent&#39;s children sections, i.e. compartments ids</span>
@@ -1372,8 +1372,8 @@
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
             
         <span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">idxvec</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">idx</span>
-</div>
+        <span class="k">return</span> <span class="n">idx</span></div>
+
 <div class="viewcode-block" id="Cell.get_idx_parent_children"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_idx_parent_children">[docs]</a>    <span class="k">def</span> <span class="nf">get_idx_parent_children</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="s">&quot;soma[0]&quot;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Get all idx of segments of parent and children sections, i.e. segment</span>
@@ -1406,9 +1406,9 @@
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
             
         <span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">idxvec</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">parent</span><span class="p">),</span> <span class="n">idx</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">parent</span><span class="p">),</span> <span class="n">idx</span><span class="p">]</span></div>
 
-</div>
+
 <div class="viewcode-block" id="Cell.get_idx_name"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.get_idx_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_idx_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return NEURON convention name of segments with index idx.</span>
@@ -1443,8 +1443,8 @@
                 <span class="n">allsegnames</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">segidx</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span>  <span class="o">%</span> <span class="n">sec</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">seg</span><span class="o">.</span><span class="n">x</span><span class="p">))</span>
                 <span class="n">segidx</span> <span class="o">+=</span> <span class="mi">1</span>
         
-        <span class="k">return</span> <span class="n">allsegnames</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-</div>
+        <span class="k">return</span> <span class="n">allsegnames</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span></div>
+
     <span class="k">def</span> <span class="nf">_collect_pt3d</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;collect the pt3d info, for each section&#39;&#39;&#39;</span>
         <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1708,9 +1708,9 @@
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x3d</span><span class="p">)):</span>
             <span class="n">polygons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_create_polygon</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">projection</span><span class="p">))</span>
         
-        <span class="k">return</span> <span class="n">polygons</span>
+        <span class="k">return</span> <span class="n">polygons</span></div>
 
-</div>
+
     <span class="k">def</span> <span class="nf">_create_segment_polygon</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">)):</span>
         <span class="sd">&#39;&#39;&#39;create a polygon to fill for segment i, in the plane</span>
 <span class="sd">        determined by kwarg projection&#39;&#39;&#39;</span>        
@@ -1804,10 +1804,10 @@
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">totnsegs</span><span class="p">):</span>
             <span class="n">polygons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_create_segment_polygon</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">projection</span><span class="p">))</span>
         
-        <span class="k">return</span> <span class="n">polygons</span>
+        <span class="k">return</span> <span class="n">polygons</span></div>
 
 
-</div>
+
 <div class="viewcode-block" id="Cell.insert_v_ext"><a class="viewcode-back" href="../../classes.html#LFPy.Cell.insert_v_ext">[docs]</a>    <span class="k">def</span> <span class="nf">insert_v_ext</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_ext</span><span class="p">,</span> <span class="n">t_ext</span><span class="p">):</span>        
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        playback of some extracellular potential v_ext on each cell.totnseg</span>
@@ -1927,14 +1927,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking
