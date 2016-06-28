@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LFPy.pointprocess &mdash; LFPy 1.1.1 documentation</title>
+    <title>LFPy.pointprocess &mdash; LFPy 1.1.2 documentation</title>
     
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.1.1',
+        VERSION:     '1.1.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.1 documentation" href="../../index.html" />
+    <link rel="top" title="LFPy 1.1.2 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" />
  
 <script type="text/javascript">
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
       </ul>
     </div>  
@@ -55,7 +55,7 @@
           <div class="body" role="main">
             
   <h1>Source code for LFPy.pointprocess</h1><div class="highlight"><pre>
-<span class="c">#!/usr/bin/env python</span>
+<span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="sd">&#39;&#39;&#39;Copyright (C) 2012 Computational Neuroscience Group, UMB.</span>
 
 <span class="sd">This program is free software: you can redistribute it and/or modify</span>
@@ -86,7 +86,7 @@
 <span class="sd">        record_current : Must be set True for recording of pointprocess currents</span>
 <span class="sd">        kwargs  : pointprocess specific variables passed on to cell/neuron</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">&#39;o&#39;</span><span class="p">,</span> 
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> 
                  <span class="n">record_current</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        cell is an LFPy.Cell object, idx index of segment. This class</span>
@@ -152,7 +152,7 @@
 <span class="sd">        pl.title(&#39;Somatic potential (mV)&#39;)</span>
 <span class="sd">        </span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">syntype</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">&#39;o&#39;</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">syntype</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
                  <span class="n">record_current</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Initialization of class Synapse</span>
@@ -168,23 +168,49 @@
         <span class="n">cell</span><span class="o">.</span><span class="n">synidx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Synapse.set_spike_times"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.set_spike_times">[docs]</a>    <span class="k">def</span> <span class="nf">set_spike_times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sptimes</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
-        <span class="sd">&#39;&#39;&#39;Set the spike times&#39;&#39;&#39;</span>
+        <span class="sd">&#39;&#39;&#39;Set the spike times explicitly using numpy arrays&#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sptimes</span> <span class="o">=</span> <span class="n">sptimes</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">sptimeslist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sptimes</span><span class="p">)</span></div>
-        
+    
+<div class="viewcode-block" id="Synapse.set_spike_times_w_netstim"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.set_spike_times_w_netstim">[docs]</a>    <span class="k">def</span> <span class="nf">set_spike_times_w_netstim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mf">1E3</span><span class="p">,</span>
+                                  <span class="n">interval</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mf">1234.</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Generate a train of pre-synaptic stimulus times by setting up the</span>
+<span class="sd">        neuron NetStim object associated with this synapse</span>
+<span class="sd">        </span>
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
+<span class="sd">        noise : float in [0, 1]</span>
+<span class="sd">            Fractional randomness, from deterministic to intervals that drawn</span>
+<span class="sd">            from negexp distribution (Poisson spiketimes).</span>
+<span class="sd">        start : float</span>
+<span class="sd">            ms, (most likely) start time of first spike</span>
+<span class="sd">        number : int</span>
+<span class="sd">            (average) number of spikes</span>
+<span class="sd">        interval : float</span>
+<span class="sd">            ms, (mean) time between spikes</span>
+<span class="sd">        seed : float</span>
+<span class="sd">            random seed value</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">netstimlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">noise</span> <span class="o">=</span> <span class="n">noise</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">netstimlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">netstimlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">netstimlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">netstimlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="Synapse.collect_current"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.collect_current">[docs]</a>    <span class="k">def</span> <span class="nf">collect_current</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Collect synapse current&#39;&#39;&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">synireclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;cell.synireclist deleted from consequtive runs&#39;</span><span class="p">)</span></div>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;cell.synireclist deleted from consequtive runs&#39;</span><span class="p">)</span></div>
     
 <div class="viewcode-block" id="Synapse.collect_potential"><a class="viewcode-back" href="../../classes.html#LFPy.Synapse.collect_potential">[docs]</a>    <span class="k">def</span> <span class="nf">collect_potential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Collect membrane potential of segment with synapse&#39;&#39;&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">synvreclist</span><span class="o">.</span><span class="n">o</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hocidx</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;cell.synvreclist deleted from consequtive runs&#39;</span><span class="p">)</span></div></div>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;cell.synvreclist deleted from consequtive runs&#39;</span><span class="p">)</span></div></div>
         
 <div class="viewcode-block" id="StimIntElectrode"><a class="viewcode-back" href="../../classes.html#LFPy.StimIntElectrode">[docs]</a><span class="k">class</span> <span class="nc">StimIntElectrode</span><span class="p">(</span><span class="n">PointProcess</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
@@ -255,8 +281,8 @@
 <span class="sd">            pl.legend(loc=&#39;best&#39;)</span>
 <span class="sd">            pl.title(&#39;Somatic potential (mV)&#39;)</span>
 <span class="sd">    &#39;&#39;&#39;</span>    
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">pptype</span><span class="o">=</span><span class="s">&#39;SEClamp&#39;</span><span class="p">,</span>
-                 <span class="n">color</span><span class="o">=</span><span class="s">&#39;p&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">&#39;*&#39;</span><span class="p">,</span> <span class="n">record_current</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">pptype</span><span class="o">=</span><span class="s1">&#39;SEClamp&#39;</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">record_current</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Will insert pptype on</span>
 <span class="sd">        cell-instance, pass the corresponding kwargs onto</span>
@@ -308,7 +334,7 @@
         <span class="n">X</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span>
         <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         
-        <span class="c">#time and values for trace, shifting</span>
+        <span class="c1">#time and values for trace, shifting</span>
         <span class="n">tTrace</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">]</span>
         <span class="n">tTrace</span> <span class="o">-=</span> <span class="n">tTrace</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         
@@ -316,7 +342,7 @@
         <span class="n">trace</span> <span class="o">-=</span> <span class="n">trace</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">trace</span> <span class="o">+=</span> <span class="n">cell</span><span class="o">.</span><span class="n">e_pas</span>
         
-        <span class="c">#creating trace</span>
+        <span class="c1">#creating trace</span>
         <span class="n">somaTvec0</span> <span class="o">=</span> <span class="n">tTrace</span>
         <span class="n">somaTvec0</span> <span class="o">+=</span> <span class="n">t_on</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">somaTvec</span> <span class="o">=</span> <span class="n">somaTvec0</span>
@@ -336,14 +362,14 @@
         <span class="n">somaTvecVec</span> <span class="o">=</span> <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">somaTvec1</span><span class="p">)</span>
         <span class="n">somaTraceVec</span> <span class="o">=</span> <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">somaTrace1</span><span class="p">)</span>
         
-        <span class="k">for</span> <span class="n">sec</span> <span class="ow">in</span> <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">somalist</span><span class="p">:</span> <span class="c">#cell.somalist</span>
-            <span class="c">#ensure that soma is perfect capacitor</span>
+        <span class="k">for</span> <span class="n">sec</span> <span class="ow">in</span> <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">somalist</span><span class="p">:</span> <span class="c1">#cell.somalist</span>
+            <span class="c1">#ensure that soma is perfect capacitor</span>
             <span class="n">sec</span><span class="o">.</span><span class="n">cm</span> <span class="o">=</span> <span class="mf">1E9</span>
-            <span class="c">#Why the fuck doesnt this work:</span>
-            <span class="c">#for seg in sec:</span>
-            <span class="c">#    somaTraceVec.play(seg._ref_v, somaTvecVec)</span>
+            <span class="c1">#Why the fuck doesnt this work:</span>
+            <span class="c1">#for seg in sec:</span>
+            <span class="c1">#    somaTraceVec.play(seg._ref_v, somaTvecVec)</span>
         
-        <span class="c">#call function that insert trace on soma</span>
+        <span class="c1">#call function that insert trace on soma</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_play_in_soma</span><span class="p">(</span><span class="n">somaTvecVec</span><span class="p">,</span> <span class="n">somaTraceVec</span><span class="p">)</span>
             
     <span class="k">def</span> <span class="nf">_play_in_soma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somaTvecVec</span><span class="p">,</span> <span class="n">somaTraceVec</span><span class="p">):</span>
@@ -351,15 +377,15 @@
 <span class="sd">        Replacement of LFPy.hoc &quot;proc play_in_soma()&quot;,</span>
 <span class="sd">        seems necessary that this function lives in hoc</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s">&#39;objref soma_tvec, soma_trace&#39;</span><span class="p">)</span>
+        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s1">&#39;objref soma_tvec, soma_trace&#39;</span><span class="p">)</span>
         
-        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s">&#39;soma_tvec = new Vector()&#39;</span><span class="p">)</span>
-        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s">&#39;soma_trace = new Vector()&#39;</span><span class="p">)</span>
+        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s1">&#39;soma_tvec = new Vector()&#39;</span><span class="p">)</span>
+        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s1">&#39;soma_trace = new Vector()&#39;</span><span class="p">)</span>
         
         <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">soma_tvec</span><span class="o">.</span><span class="n">from_python</span><span class="p">(</span><span class="n">somaTvecVec</span><span class="p">)</span>
         <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">soma_trace</span><span class="o">.</span><span class="n">from_python</span><span class="p">(</span><span class="n">somaTraceVec</span><span class="p">)</span>
         
-        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s">&#39;soma_trace.play(&amp;soma.v(0.5), soma_tvec)&#39;</span><span class="p">)</span>
+        <span class="n">neuron</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="s1">&#39;soma_trace.play(&amp;soma.v(0.5), soma_tvec)&#39;</span><span class="p">)</span>
 </pre></div>
 
           </div>
@@ -375,9 +401,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -393,14 +416,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">LFPy 1.1.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking

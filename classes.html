@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module LFPy &mdash; LFPy 1.1.1 documentation</title>
+    <title>Module LFPy &mdash; LFPy 1.1.2 documentation</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1.1',
+        VERSION:     '1.1.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.1 documentation" href="index.html" />
+    <link rel="top" title="LFPy 1.1.2 documentation" href="index.html" />
     <link rel="prev" title="Notes on LFPy" href="additional.html" />
  
 <script type="text/javascript">
@@ -47,7 +47,7 @@
         <li class="right" >
           <a href="additional.html" title="Notes on LFPy"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -96,51 +96,52 @@ GNU General Public License for more details.</p>
 <h2>class <a class="reference internal" href="#LFPy.Cell" title="LFPy.Cell"><code class="xref py py-class docutils literal"><span class="pre">Cell</span></code></a><a class="headerlink" href="#class-cell" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="LFPy.Cell">
-<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">Cell</code><span class="sig-paren">(</span><em>morphology</em>, <em>v_init=-65.0</em>, <em>passive=True</em>, <em>Ra=150</em>, <em>rm=30000</em>, <em>cm=1.0</em>, <em>e_pas=-65.0</em>, <em>extracellular=True</em>, <em>timeres_NEURON=0.125</em>, <em>timeres_python=0.125</em>, <em>tstartms=0</em>, <em>tstopms=100</em>, <em>nsegs_method='lambda100'</em>, <em>lambda_f=100</em>, <em>d_lambda=0.1</em>, <em>max_nsegs_length=None</em>, <em>delete_sections=True</em>, <em>custom_code=None</em>, <em>custom_fun=None</em>, <em>custom_fun_args=None</em>, <em>pt3d=False</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/cell.html#Cell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.Cell" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">Cell</code><span class="sig-paren">(</span><em>morphology</em>, <em>v_init=-65.0</em>, <em>passive=True</em>, <em>Ra=150</em>, <em>rm=30000</em>, <em>cm=1.0</em>, <em>e_pas=-65.0</em>, <em>extracellular=True</em>, <em>timeres_NEURON=0.125</em>, <em>timeres_python=0.125</em>, <em>tstartms=0</em>, <em>tstopms=100</em>, <em>nsegs_method='lambda100'</em>, <em>lambda_f=100</em>, <em>d_lambda=0.1</em>, <em>max_nsegs_length=None</em>, <em>delete_sections=True</em>, <em>custom_code=None</em>, <em>custom_fun=None</em>, <em>custom_fun_args=None</em>, <em>pt3d=False</em>, <em>celsius=None</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/cell.html#Cell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.Cell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>The main cell class used in LFPy.</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>morphology : [str]: path/to/morphology/file
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">morphology</span> <span class="p">:</span> <span class="p">[</span><span class="nb">str</span><span class="p">]:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">morphology</span><span class="o">/</span><span class="n">file</span>
 
-v_init: [-65.]: initial potential
-passive: [True]/False: passive mechs are initialized if True
-Ra: [150.]: axial resistance
-rm: [30000]: membrane resistivity
-cm: [1.0]: membrane capacitance
-e_pas: [-65.]: passive mechanism reversal potential
-extracellular: [True]/False: switch for NEURON&#39;s extracellular mechanism
+<span class="n">v_init</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">65.</span><span class="p">]:</span> <span class="n">initial</span> <span class="n">potential</span>
+<span class="n">passive</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">/</span><span class="kc">False</span><span class="p">:</span> <span class="n">passive</span> <span class="n">mechs</span> <span class="n">are</span> <span class="n">initialized</span> <span class="k">if</span> <span class="kc">True</span>
+<span class="n">Ra</span><span class="p">:</span> <span class="p">[</span><span class="mf">150.</span><span class="p">]:</span> <span class="n">axial</span> <span class="n">resistance</span>
+<span class="n">rm</span><span class="p">:</span> <span class="p">[</span><span class="mi">30000</span><span class="p">]:</span> <span class="n">membrane</span> <span class="n">resistivity</span>
+<span class="n">cm</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]:</span> <span class="n">membrane</span> <span class="n">capacitance</span>
+<span class="n">e_pas</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">65.</span><span class="p">]:</span> <span class="n">passive</span> <span class="n">mechanism</span> <span class="n">reversal</span> <span class="n">potential</span>
+<span class="n">extracellular</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">/</span><span class="kc">False</span><span class="p">:</span> <span class="n">switch</span> <span class="k">for</span> <span class="n">NEURON</span><span class="s1">&#39;s extracellular mechanism</span>
 
-timeres_NEURON: [0.1]: internal dt for NEURON simulation
-timeres_python: [0.1]: overall dt for python simulation
+<span class="n">timeres_NEURON</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span> <span class="n">internal</span> <span class="n">dt</span> <span class="k">for</span> <span class="n">NEURON</span> <span class="n">simulation</span>
+<span class="n">timeres_python</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span> <span class="n">overall</span> <span class="n">dt</span> <span class="k">for</span> <span class="n">python</span> <span class="n">simulation</span>
 
-tstartms: [0.]:  initialization time for simulation &lt;= 0 ms
-tstopms: [100.]: stop time for simulation &gt; 0 ms
+<span class="n">tstartms</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.</span><span class="p">]:</span>  <span class="n">initialization</span> <span class="n">time</span> <span class="k">for</span> <span class="n">simulation</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="n">ms</span>
+<span class="n">tstopms</span><span class="p">:</span> <span class="p">[</span><span class="mf">100.</span><span class="p">]:</span> <span class="n">stop</span> <span class="n">time</span> <span class="k">for</span> <span class="n">simulation</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">ms</span>
 
-nsegs_method: [&#39;lambda100&#39;]/&#39;lambda_f&#39;/&#39;fixed_length&#39;: nseg rule
-max_nsegs_length: [None]: max segment length for method &#39;fixed_length&#39;
-lambda_f: [100]: AC frequency for method &#39;lambda_f&#39;
-d_lambda: [0.1]: parameter for d_lambda rule
+<span class="n">nsegs_method</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;lambda100&#39;</span><span class="p">]</span><span class="o">/</span><span class="s1">&#39;lambda_f&#39;</span><span class="o">/</span><span class="s1">&#39;fixed_length&#39;</span><span class="p">:</span> <span class="n">nseg</span> <span class="n">rule</span>
+<span class="n">max_nsegs_length</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">max</span> <span class="n">segment</span> <span class="n">length</span> <span class="k">for</span> <span class="n">method</span> <span class="s1">&#39;fixed_length&#39;</span>
+<span class="n">lambda_f</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">]:</span> <span class="n">AC</span> <span class="n">frequency</span> <span class="k">for</span> <span class="n">method</span> <span class="s1">&#39;lambda_f&#39;</span>
+<span class="n">d_lambda</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span> <span class="n">parameter</span> <span class="k">for</span> <span class="n">d_lambda</span> <span class="n">rule</span>
 
-delete_sections: [True]: delete pre-existing section-references
+<span class="n">delete_sections</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">]:</span> <span class="n">delete</span> <span class="n">pre</span><span class="o">-</span><span class="n">existing</span> <span class="n">section</span><span class="o">-</span><span class="n">references</span>
 
-custom_code: [None]: list of model-specific code files ([.py/.hoc])
-custom_fun: [None]: list of model-specific functions with args
-custom_fun_args: [None]: list of args passed to custom_fun functions
-pt3d: True/[False]: use pt3d-info of the cell geometries switch
-verbose: True/[False]: verbose output switch
+<span class="n">custom_code</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">model</span><span class="o">-</span><span class="n">specific</span> <span class="n">code</span> <span class="n">files</span> <span class="p">([</span><span class="o">.</span><span class="n">py</span><span class="o">/.</span><span class="n">hoc</span><span class="p">])</span>
+<span class="n">custom_fun</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">model</span><span class="o">-</span><span class="n">specific</span> <span class="n">functions</span> <span class="k">with</span> <span class="n">args</span>
+<span class="n">custom_fun_args</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">args</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">custom_fun</span> <span class="n">functions</span>
+<span class="n">pt3d</span><span class="p">:</span> <span class="kc">True</span><span class="o">/</span><span class="p">[</span><span class="kc">False</span><span class="p">]:</span> <span class="n">use</span> <span class="n">pt3d</span><span class="o">-</span><span class="n">info</span> <span class="n">of</span> <span class="n">the</span> <span class="n">cell</span> <span class="n">geometries</span> <span class="n">switch</span>
+<span class="n">celsius</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="n">Temperature</span> <span class="ow">in</span> <span class="n">celsius</span><span class="o">.</span> <span class="n">If</span> <span class="n">nothing</span> <span class="ow">is</span> <span class="n">specified</span> <span class="n">here</span> <span class="ow">or</span> <span class="ow">in</span> <span class="n">custom</span> <span class="n">code</span> <span class="n">it</span> <span class="ow">is</span> <span class="mf">6.3</span> <span class="n">C</span>
+<span class="n">verbose</span><span class="p">:</span> <span class="kc">True</span><span class="o">/</span><span class="p">[</span><span class="kc">False</span><span class="p">]:</span> <span class="n">verbose</span> <span class="n">output</span> <span class="n">switch</span>
 </pre></div>
 </div>
 <p>Usage of cell class:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">LFPy</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">LFPy</span>
 <span class="n">cellParameters</span> <span class="o">=</span> <span class="p">{</span>                          
-    <span class="s">&#39;morphology&#39;</span> <span class="p">:</span> <span class="s">&#39;path/to/morphology&#39;</span><span class="p">,</span>
-    <span class="s">&#39;rm&#39;</span> <span class="p">:</span> <span class="mi">30000</span><span class="p">,</span>
-    <span class="s">&#39;cm&#39;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
-    <span class="s">&#39;Ra&#39;</span> <span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
-    <span class="s">&#39;timeres_NEURON&#39;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-    <span class="s">&#39;timeres_python&#39;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-    <span class="s">&#39;tstartms&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
-    <span class="s">&#39;tstopms&#39;</span> <span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="s1">&#39;morphology&#39;</span> <span class="p">:</span> <span class="s1">&#39;path/to/morphology&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;rm&#39;</span> <span class="p">:</span> <span class="mi">30000</span><span class="p">,</span>
+    <span class="s1">&#39;cm&#39;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s1">&#39;Ra&#39;</span> <span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="s1">&#39;timeres_NEURON&#39;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s1">&#39;timeres_python&#39;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s1">&#39;tstartms&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
+    <span class="s1">&#39;tstopms&#39;</span> <span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
 <span class="p">}</span>
 <span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="o">**</span><span class="n">cellParameters</span><span class="p">)</span>
 <span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
@@ -152,19 +153,19 @@ verbose: True/[False]: verbose output switch
 <dd><p>Save data in cell to filename, using cPickle. It will however destroy
 any neuron.h objects upon saving, as c-objects cannot be pickled</p>
 <p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cell</span><span class="o">.</span><span class="n">cellpickler</span><span class="p">(</span><span class="s">&#39;cell.cpickle&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span><span class="o">.</span><span class="n">cellpickler</span><span class="p">(</span><span class="s1">&#39;cell.cpickle&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To load this cell again in another session:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">cPickle</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">file</span><span class="p">(</span><span class="s">&#39;cell.cpickle&#39;</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cPickle</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">file</span><span class="p">(</span><span class="s1">&#39;cell.cpickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
 <span class="n">cell</span> <span class="o">=</span> <span class="n">cPickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>alternatively:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">LFPy</span>
-<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&#39;cell.cpickle&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">LFPy</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;cell.cpickle&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -175,8 +176,8 @@ any neuron.h objects upon saving, as c-objects cannot be pickled</p>
 <dd><p>Mirror the morphology around given axis, (default x-axis),
 useful to introduce more heterogeneouties in morphology shapes</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>axis : str
-    &#39;x&#39; or &#39;y&#39; or &#39;z&#39;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">axis</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="s1">&#39;x&#39;</span> <span class="ow">or</span> <span class="s1">&#39;y&#39;</span> <span class="ow">or</span> <span class="s1">&#39;z&#39;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -187,10 +188,10 @@ useful to introduce more heterogeneouties in morphology shapes</p>
 <dd><p>Get the index number of a segment in specified section which 
 midpoint is closest to the coordinates defined by the user
 kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>x: float, coordinate
-y: float, coordinate
-z: float, coordinate
-section: str, string matching a section-name
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">coordinate</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">coordinate</span>
+<span class="n">z</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">coordinate</span>
+<span class="n">section</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">string</span> <span class="n">matching</span> <span class="n">a</span> <span class="n">section</span><span class="o">-</span><span class="n">name</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -201,16 +202,16 @@ section: str, string matching a section-name
 <dd><p>Returns neuron idx of segments from sections with names that match
 the pattern defined in input section on interval [z_min, z_max].</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>section: str, any entry in cell.allsecnames or just &#39;allsec&#39;.
-z_min: float, depth filter
-z_max: float depth filter
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">section</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">any</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">allsecnames</span> <span class="ow">or</span> <span class="n">just</span> <span class="s1">&#39;allsec&#39;</span><span class="o">.</span>
+<span class="n">z_min</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">depth</span> <span class="nb">filter</span>
+<span class="n">z_max</span><span class="p">:</span> <span class="nb">float</span> <span class="n">depth</span> <span class="nb">filter</span>
 </pre></div>
 </div>
 <p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">idx</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="s">&#39;allsec&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">idx</span>
-<span class="n">idx</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;soma&#39;</span><span class="p">,</span> <span class="s">&#39;dend&#39;</span><span class="p">,</span> <span class="s">&#39;apic&#39;</span><span class="p">])</span>
-<span class="k">print</span> <span class="n">idx</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="s1">&#39;allsec&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">idx</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;soma&#39;</span><span class="p">,</span> <span class="s1">&#39;dend&#39;</span><span class="p">,</span> <span class="s1">&#39;apic&#39;</span><span class="p">])</span>
+<span class="nb">print</span> <span class="n">idx</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -221,8 +222,8 @@ z_max: float depth filter
 <dd><p>Get the idx of parent&#8217;s children sections, i.e. compartments ids
 of sections connected to parent-argument</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>parent: str
-    name-pattern matching a sectionname
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parent</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="o">-</span><span class="n">pattern</span> <span class="n">matching</span> <span class="n">a</span> <span class="n">sectionname</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -235,8 +236,8 @@ The returned argument is a list of tuples with corresponding
 segment idx, section name, and position along the section, like;
 [(0, &#8216;neuron.h.soma[0]&#8217;, 0.5),]</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>idx : np.ndarray, dtype int
-    segment indices, must be between 0 and cell.totnsegs        
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">dtype</span> <span class="nb">int</span>
+    <span class="n">segment</span> <span class="n">indices</span><span class="p">,</span> <span class="n">must</span> <span class="n">be</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">cell</span><span class="o">.</span><span class="n">totnsegs</span>        
 </pre></div>
 </div>
 </dd></dl>
@@ -248,8 +249,8 @@ segment idx, section name, and position along the section, like;
 idx of sections connected to parent-argument, and also of the parent
 segments</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>parent: str
-    name-pattern matching a sectionname
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parent</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="o">-</span><span class="n">pattern</span> <span class="n">matching</span> <span class="n">a</span> <span class="n">sectionname</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -264,28 +265,28 @@ mpl.collections.PolyCollection</p>
 <p>Returned argument is a list of (np.ndarray, np.ndarray) tuples
 giving the trajectory of each section</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>projection : (&#39;x&#39;, &#39;z&#39;) tuple of two strings determining projection 
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">projection</span> <span class="p">:</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">)</span> <span class="nb">tuple</span> <span class="n">of</span> <span class="n">two</span> <span class="n">strings</span> <span class="n">determining</span> <span class="n">projection</span> 
 </pre></div>
 </div>
 <p>The most efficient way of using this would be something like</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="kn">import</span> <span class="n">PolyCollection</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="k">import</span> <span class="n">PolyCollection</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s">&#39;PATH/TO/MORPHOLOGY&#39;</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s1">&#39;PATH/TO/MORPHOLOGY&#39;</span><span class="p">)</span>
 
 <span class="n">zips</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">)):</span>
     <span class="n">zips</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
 
 <span class="n">polycol</span> <span class="o">=</span> <span class="n">PolyCollection</span><span class="p">(</span><span class="n">zips</span><span class="p">,</span>
-                         <span class="n">edgecolors</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
-                         <span class="n">facecolors</span><span class="o">=</span><span class="s">&#39;gray&#39;</span><span class="p">)</span>
+                         <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                         <span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">polycol</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;equal&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -306,8 +307,8 @@ with indices idx0 and idx1. Will return a float in unit of micrometers.</p>
 idx0 and idx1. The argument returned is a vector [x, y, z], where
 x = self.xmid[idx1] - self.xmid[idx0] etc.</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>idx0 : int
-idx1 : int
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">idx0</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="n">idx1</span> <span class="p">:</span> <span class="nb">int</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -320,24 +321,24 @@ argument projection=(&#8216;x&#8217;, &#8216;z&#8217;), that can be
 visualized using e.g., plt.fill()</p>
 <p>Returned argument is a list of (x, z) tuples giving the trajectory
 of each section that can be plotted using PolyCollection</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="kn">import</span> <span class="n">PolyCollection</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="k">import</span> <span class="n">PolyCollection</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s">&#39;PATH/TO/MORPHOLOGY&#39;</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s1">&#39;PATH/TO/MORPHOLOGY&#39;</span><span class="p">)</span>
 
 <span class="n">zips</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_idx_polygons</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">)):</span>
     <span class="n">zips</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
 
 <span class="n">polycol</span> <span class="o">=</span> <span class="n">PolyCollection</span><span class="p">(</span><span class="n">zips</span><span class="p">,</span>
-                         <span class="n">edgecolors</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
-                         <span class="n">facecolors</span><span class="o">=</span><span class="s">&#39;gray&#39;</span><span class="p">)</span>
+                         <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                         <span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">polycol</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;equal&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -351,10 +352,10 @@ of each section that can be plotted using PolyCollection</p>
 normalized to the membrane area of segment on 
 interval [z_min, z_max]</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>section: str, string matching a section-name
-nidx: int, number of random indices
-z_min: float, depth filter
-z_max: float depth filter            
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">section</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">string</span> <span class="n">matching</span> <span class="n">a</span> <span class="n">section</span><span class="o">-</span><span class="n">name</span>
+<span class="n">nidx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number</span> <span class="n">of</span> <span class="n">random</span> <span class="n">indices</span>
+<span class="n">z_min</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">depth</span> <span class="nb">filter</span>
+<span class="n">z_max</span><span class="p">:</span> <span class="nb">float</span> <span class="n">depth</span> <span class="nb">filter</span>            
 </pre></div>
 </div>
 </dd></dl>
@@ -366,9 +367,9 @@ z_max: float depth filter
 in section sum(prob)=1 over all segments in section.
 Prob. determined by area.</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>section: str, string matching a section-name
-z_min: float, depth filter
-z_max: float depth filter            
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">section</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">string</span> <span class="n">matching</span> <span class="n">a</span> <span class="n">section</span><span class="o">-</span><span class="n">name</span>
+<span class="n">z_min</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">depth</span> <span class="nb">filter</span>
+<span class="n">z_max</span><span class="p">:</span> <span class="nb">float</span> <span class="n">depth</span> <span class="nb">filter</span>            
 </pre></div>
 </div>
 </dd></dl>
@@ -380,10 +381,10 @@ z_max: float depth filter
 segments in idx-array.
 Normalised probability determined by area of segments.</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>idx : np.ndarray, dtype=int.
-    array of segment indices
-z_min: float, depth filter
-z_max: float depth filter            
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="o">.</span>
+    <span class="n">array</span> <span class="n">of</span> <span class="n">segment</span> <span class="n">indices</span>
+<span class="n">z_min</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">depth</span> <span class="nb">filter</span>
+<span class="n">z_max</span><span class="p">:</span> <span class="nb">float</span> <span class="n">depth</span> <span class="nb">filter</span>            
 </pre></div>
 </div>
 </dd></dl>
@@ -401,43 +402,43 @@ to (list of) neuron.h.Vector types, to allow playback into each
 compartment e_extracellular reference.</p>
 <p>Can not be deleted prior to running cell.simulate()</p>
 <p>Args:</p>
-<div class="highlight-python"><div class="highlight"><pre>v_ext : cell.totnsegs x t_ext.size np.array, unit mV
-t_ext : np.array, time vector of v_ext
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v_ext</span> <span class="p">:</span> <span class="n">cell</span><span class="o">.</span><span class="n">totnsegs</span> <span class="n">x</span> <span class="n">t_ext</span><span class="o">.</span><span class="n">size</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">unit</span> <span class="n">mV</span>
+<span class="n">t_ext</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">time</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">v_ext</span>
 </pre></div>
 </div>
 <p>Simple usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">LFPy</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">LFPy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c">#create cell</span>
-<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s">&#39;morphologies/example_morphology.hoc&#39;</span><span class="p">)</span>
+<span class="c1">#create cell</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s1">&#39;morphologies/example_morphology.hoc&#39;</span><span class="p">)</span>
 
-<span class="c">#time vector and extracellular field for every segment:</span>
+<span class="c1">#time vector and extracellular field for every segment:</span>
 <span class="n">t_ext</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tstopms</span> <span class="o">/</span> <span class="n">cell</span><span class="o">.</span><span class="n">timeres_python</span><span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span>                     <span class="n">cell</span><span class="o">.</span><span class="n">timeres_python</span>
 <span class="n">v_ext</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">totnsegs</span><span class="p">,</span> <span class="n">t_ext</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="o">-</span><span class="mf">0.5</span>
 
-<span class="c">#insert potentials and record response:</span>
+<span class="c1">#insert potentials and record response:</span>
 <span class="n">cell</span><span class="o">.</span><span class="n">insert_v_ext</span><span class="p">(</span><span class="n">v_ext</span><span class="p">,</span> <span class="n">t_ext</span><span class="p">)</span>
-<span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">rec_imem</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rec_vmem</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">rec_imem</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rec_vmem</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">311</span><span class="p">)</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">312</span><span class="p">)</span>
 <span class="n">ax3</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">313</span><span class="p">)</span>
-<span class="n">eim</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">v_ext</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s">&#39;spectral&#39;</span><span class="p">)</span>
+<span class="n">eim</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">v_ext</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
 <span class="n">cb1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">eim</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
-<span class="n">cb1</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s">&#39;v_ext&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;tight&#39;</span><span class="p">))</span>
-<span class="n">iim</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">imem</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">&#39;spectral&#39;</span><span class="p">)</span>
+<span class="n">cb1</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;v_ext&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;tight&#39;</span><span class="p">))</span>
+<span class="n">iim</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">imem</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
 <span class="n">cb2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">iim</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
-<span class="n">cb2</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s">&#39;imem&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;tight&#39;</span><span class="p">))</span>
-<span class="n">vim</span> <span class="o">=</span> <span class="n">ax3</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">vmem</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">&#39;spectral&#39;</span><span class="p">)</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax3</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;tight&#39;</span><span class="p">))</span>
+<span class="n">cb2</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;imem&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;tight&#39;</span><span class="p">))</span>
+<span class="n">vim</span> <span class="o">=</span> <span class="n">ax3</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">vmem</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">ax3</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;tight&#39;</span><span class="p">))</span>
 <span class="n">cb3</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">vim</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">)</span>
-<span class="n">cb3</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s">&#39;vmem&#39;</span><span class="p">)</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">&#39;tstep&#39;</span><span class="p">)</span>
+<span class="n">cb3</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;vmem&#39;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tstep&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -450,10 +451,10 @@ t_ext : np.array, time vector of v_ext
 idx on cell object, with keyword arguments according to types 
 SEClamp, VClamp, IClamp, SinIClamp, ChirpIClamp.</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>idx : int
-pptype : str
-record_current : bool
-kwargs : arguments passed on from class StimIntElectrode
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="n">pptype</span> <span class="p">:</span> <span class="nb">str</span>
+<span class="n">record_current</span> <span class="p">:</span> <span class="nb">bool</span>
+<span class="n">kwargs</span> <span class="p">:</span> <span class="n">arguments</span> <span class="n">passed</span> <span class="n">on</span> <span class="kn">from</span> <span class="nn">class</span> <span class="n">StimIntElectrode</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -474,8 +475,8 @@ Input should be angles in radians.</p>
 where x, y, z are the rotation angles around respective axes.
 All rotation angles are optional.</p>
 <p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="n">rotation</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;x&#39;</span> <span class="p">:</span> <span class="mf">1.233</span><span class="p">,</span> <span class="s">&#39;y&#39;</span> <span class="p">:</span> <span class="mf">0.236</span><span class="p">,</span> <span class="s">&#39;z&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="n">rotation</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span> <span class="p">:</span> <span class="mf">1.233</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span> <span class="p">:</span> <span class="mf">0.236</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">}</span>
 <span class="n">cell</span><span class="o">.</span><span class="n">set_rotation</span><span class="p">(</span><span class="o">**</span><span class="n">rotation</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -486,12 +487,12 @@ All rotation angles are optional.</p>
 <code class="descname">set_synapse</code><span class="sig-paren">(</span><em>idx</em>, <em>syntype</em>, <em>record_current=False</em>, <em>record_potential=False</em>, <em>weight=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/cell.html#Cell.set_synapse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.Cell.set_synapse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Insert syntype (e.g. ExpSyn) synapse on segment with index idx,</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>idx : int
-syntype : str
-record_current : bool
-record_potential : bool
-weight : float            
-kwargs : arguments passed on from class Synapse
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="n">syntype</span> <span class="p">:</span> <span class="nb">str</span>
+<span class="n">record_current</span> <span class="p">:</span> <span class="nb">bool</span>
+<span class="n">record_potential</span> <span class="p">:</span> <span class="nb">bool</span>
+<span class="n">weight</span> <span class="p">:</span> <span class="nb">float</span>            
+<span class="n">kwargs</span> <span class="p">:</span> <span class="n">arguments</span> <span class="n">passed</span> <span class="n">on</span> <span class="kn">from</span> <span class="nn">class</span> <span class="n">Synapse</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -502,7 +503,7 @@ kwargs : arguments passed on from class Synapse
 <dd><p>This is the main function running the simulation of the NEURON model.
 Start NEURON simulation and record variables specified by arguments.</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>electrode:  Either an LFPy.RecExtElectrode object or a list of such.
+<div class="highlight-default"><div class="highlight"><pre><span></span>electrode:  Either an LFPy.RecExtElectrode object or a list of such.
             If supplied, LFPs will be calculated at every time step
             and accessible as electrode.LFP. If a list of objects
             is given, accessible as electrode[0].LFP etc.
@@ -546,57 +547,57 @@ dotprodcoeffs :  list of N x Nseg np.ndarray. These arrays will at
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">LFPy.cell.Cell</span></code></p>
 <p>This class allow using cell templates with some limitations</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>morphology : [str]: path to morphology file;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">morphology</span> <span class="p">:</span> <span class="p">[</span><span class="nb">str</span><span class="p">]:</span> <span class="n">path</span> <span class="n">to</span> <span class="n">morphology</span> <span class="n">file</span><span class="p">;</span>
 
-templatefile :  [str]: Cell template definition(s)
-templatename :  [str]: Cell template-name used for this cell object
-templateargs :  [str]: Arguments provided to template-definition
+<span class="n">templatefile</span> <span class="p">:</span>  <span class="p">[</span><span class="nb">str</span><span class="p">]:</span> <span class="n">Cell</span> <span class="n">template</span> <span class="n">definition</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">templatename</span> <span class="p">:</span>  <span class="p">[</span><span class="nb">str</span><span class="p">]:</span> <span class="n">Cell</span> <span class="n">template</span><span class="o">-</span><span class="n">name</span> <span class="n">used</span> <span class="k">for</span> <span class="n">this</span> <span class="n">cell</span> <span class="nb">object</span>
+<span class="n">templateargs</span> <span class="p">:</span>  <span class="p">[</span><span class="nb">str</span><span class="p">]:</span> <span class="n">Arguments</span> <span class="n">provided</span> <span class="n">to</span> <span class="n">template</span><span class="o">-</span><span class="n">definition</span>
 
-v_init: [-65.]: initial potential
-passive: [True]/False: passive mechs are initialized if True
-Ra: [150.]: axial resistance
-rm: [30000]: membrane resistivity
-cm: [1.0]: membrane capacitance
-e_pas: [-65.]: passive mechanism reversal potential
-extracellular: [True]/False: switch for NEURON&#39;s extracellular mechanism
+<span class="n">v_init</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">65.</span><span class="p">]:</span> <span class="n">initial</span> <span class="n">potential</span>
+<span class="n">passive</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">/</span><span class="kc">False</span><span class="p">:</span> <span class="n">passive</span> <span class="n">mechs</span> <span class="n">are</span> <span class="n">initialized</span> <span class="k">if</span> <span class="kc">True</span>
+<span class="n">Ra</span><span class="p">:</span> <span class="p">[</span><span class="mf">150.</span><span class="p">]:</span> <span class="n">axial</span> <span class="n">resistance</span>
+<span class="n">rm</span><span class="p">:</span> <span class="p">[</span><span class="mi">30000</span><span class="p">]:</span> <span class="n">membrane</span> <span class="n">resistivity</span>
+<span class="n">cm</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]:</span> <span class="n">membrane</span> <span class="n">capacitance</span>
+<span class="n">e_pas</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">65.</span><span class="p">]:</span> <span class="n">passive</span> <span class="n">mechanism</span> <span class="n">reversal</span> <span class="n">potential</span>
+<span class="n">extracellular</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">/</span><span class="kc">False</span><span class="p">:</span> <span class="n">switch</span> <span class="k">for</span> <span class="n">NEURON</span><span class="s1">&#39;s extracellular mechanism</span>
 
-timeres_NEURON: [0.1]: internal dt for NEURON simulation
-timeres_python: [0.1]: overall dt for python simulation
+<span class="n">timeres_NEURON</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span> <span class="n">internal</span> <span class="n">dt</span> <span class="k">for</span> <span class="n">NEURON</span> <span class="n">simulation</span>
+<span class="n">timeres_python</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span> <span class="n">overall</span> <span class="n">dt</span> <span class="k">for</span> <span class="n">python</span> <span class="n">simulation</span>
 
-tstartms: [0.]:  initialization time for simulation &lt;= 0 ms
-tstopms: [100.]: stop time for simulation &gt; 0 ms
+<span class="n">tstartms</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.</span><span class="p">]:</span>  <span class="n">initialization</span> <span class="n">time</span> <span class="k">for</span> <span class="n">simulation</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="n">ms</span>
+<span class="n">tstopms</span><span class="p">:</span> <span class="p">[</span><span class="mf">100.</span><span class="p">]:</span> <span class="n">stop</span> <span class="n">time</span> <span class="k">for</span> <span class="n">simulation</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">ms</span>
 
-nsegs_method: [&#39;lambda100&#39;]/&#39;lambda_f&#39;/&#39;fixed_length&#39;: nseg rule
-max_nsegs_length: [None]: max segment length for method &#39;fixed_length&#39;
-lambda_f: [100]: AC frequency for method &#39;lambda_f&#39;
+<span class="n">nsegs_method</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;lambda100&#39;</span><span class="p">]</span><span class="o">/</span><span class="s1">&#39;lambda_f&#39;</span><span class="o">/</span><span class="s1">&#39;fixed_length&#39;</span><span class="p">:</span> <span class="n">nseg</span> <span class="n">rule</span>
+<span class="n">max_nsegs_length</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">max</span> <span class="n">segment</span> <span class="n">length</span> <span class="k">for</span> <span class="n">method</span> <span class="s1">&#39;fixed_length&#39;</span>
+<span class="n">lambda_f</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">]:</span> <span class="n">AC</span> <span class="n">frequency</span> <span class="k">for</span> <span class="n">method</span> <span class="s1">&#39;lambda_f&#39;</span>
 
-delete_sections: [True]: delete pre-existing section-references
+<span class="n">delete_sections</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">]:</span> <span class="n">delete</span> <span class="n">pre</span><span class="o">-</span><span class="n">existing</span> <span class="n">section</span><span class="o">-</span><span class="n">references</span>
 
-custom_code: [None]: list of model-specific code files ([.py/.hoc])
-custom_fun: [None]: list of model-specific functions with args
-custom_fun_args: [None]: list of args passed to custom_fun functions
-pt3d: True/[False]: use pt3d-info of the cell geometries switch
-verbose: True/[False]: verbose output switch
+<span class="n">custom_code</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">model</span><span class="o">-</span><span class="n">specific</span> <span class="n">code</span> <span class="n">files</span> <span class="p">([</span><span class="o">.</span><span class="n">py</span><span class="o">/.</span><span class="n">hoc</span><span class="p">])</span>
+<span class="n">custom_fun</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">model</span><span class="o">-</span><span class="n">specific</span> <span class="n">functions</span> <span class="k">with</span> <span class="n">args</span>
+<span class="n">custom_fun_args</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">args</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">custom_fun</span> <span class="n">functions</span>
+<span class="n">pt3d</span><span class="p">:</span> <span class="kc">True</span><span class="o">/</span><span class="p">[</span><span class="kc">False</span><span class="p">]:</span> <span class="n">use</span> <span class="n">pt3d</span><span class="o">-</span><span class="n">info</span> <span class="n">of</span> <span class="n">the</span> <span class="n">cell</span> <span class="n">geometries</span> <span class="n">switch</span>
+<span class="n">verbose</span><span class="p">:</span> <span class="kc">True</span><span class="o">/</span><span class="p">[</span><span class="kc">False</span><span class="p">]:</span> <span class="n">verbose</span> <span class="n">output</span> <span class="n">switch</span>
 </pre></div>
 </div>
 <p>Usage of TemplateCell class:</p>
-<div class="highlight-python"><div class="highlight"><pre>import LFPy
-cellParameters = {                      
-    &#39;morphology&#39; : &#39;path/to/morphology&#39;,
-    &#39;templatefile&#39; :  &#39;path/to/template-file (.hoc)
-    &#39;templatename&#39; :  &#39;templatename&#39;
-    &#39;templateargs&#39; :  None
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">LFPy</span>
+<span class="n">cellParameters</span> <span class="o">=</span> <span class="p">{</span>                      
+    <span class="s1">&#39;morphology&#39;</span> <span class="p">:</span> <span class="s1">&#39;path/to/morphology&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;templatefile&#39;</span> <span class="p">:</span>  <span class="s1">&#39;path/to/template-file (.hoc)</span>
+    <span class="s1">&#39;templatename&#39;</span> <span class="p">:</span>  <span class="s1">&#39;templatename&#39;</span>
+    <span class="s1">&#39;templateargs&#39;</span> <span class="p">:</span>  <span class="kc">None</span>
 
-    &#39;rm&#39; : 30000,
-    &#39;cm&#39; : 1.0,
-    &#39;Ra&#39; : 150,
-    &#39;timeres_NEURON&#39; : 0.1,
-    &#39;timeres_python&#39; : 0.1,
-    &#39;tstartms&#39; : -50,
-    &#39;tstopms&#39; : 50,
-}
-cell = LFPy.TemplateCell(**cellParameters)
-cell.simulate()
+    <span class="s1">&#39;rm&#39;</span> <span class="p">:</span> <span class="mi">30000</span><span class="p">,</span>
+    <span class="s1">&#39;cm&#39;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s1">&#39;Ra&#39;</span> <span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="s1">&#39;timeres_NEURON&#39;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s1">&#39;timeres_python&#39;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s1">&#39;tstartms&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
+    <span class="s1">&#39;tstopms&#39;</span> <span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">TemplateCell</span><span class="p">(</span><span class="o">**</span><span class="n">cellParameters</span><span class="p">)</span>
+<span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -610,12 +611,12 @@ cell.simulate()
 <dd><p>Superclass on top of Synapse, StimIntElectrode, 
 just to import and set some shared variables.</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>cell    : LFPy.Cell object
-idx     : index of segment
-color   : color in plot (optional) 
-marker  : marker in plot (optional) 
-record_current : Must be set True for recording of pointprocess currents
-kwargs  : pointprocess specific variables passed on to cell/neuron
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span>    <span class="p">:</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span> <span class="nb">object</span>
+<span class="n">idx</span>     <span class="p">:</span> <span class="n">index</span> <span class="n">of</span> <span class="n">segment</span>
+<span class="n">color</span>   <span class="p">:</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">plot</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> 
+<span class="n">marker</span>  <span class="p">:</span> <span class="n">marker</span> <span class="ow">in</span> <span class="n">plot</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> 
+<span class="n">record_current</span> <span class="p">:</span> <span class="n">Must</span> <span class="n">be</span> <span class="nb">set</span> <span class="kc">True</span> <span class="k">for</span> <span class="n">recording</span> <span class="n">of</span> <span class="n">pointprocess</span> <span class="n">currents</span>
+<span class="n">kwargs</span>  <span class="p">:</span> <span class="n">pointprocess</span> <span class="n">specific</span> <span class="n">variables</span> <span class="n">passed</span> <span class="n">on</span> <span class="n">to</span> <span class="n">cell</span><span class="o">/</span><span class="n">neuron</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -639,37 +640,37 @@ for details, or corresponding mod-files.</p>
 <p>This class is meant to be used with synaptic mechanisms, giving rise to
 currents that will be part of the membrane currents.</p>
 <p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">import</span> <span class="nn">LFPy</span>
-<span class="kn">import</span> <span class="nn">pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+<span class="kn">import</span> <span class="nn">pylab</span> <span class="k">as</span> <span class="nn">pl</span>
 
 <span class="n">pl</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">cellParameters</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;morphology&#39;</span> <span class="p">:</span>  <span class="s">&#39;morphologies/L5_Mainen96_LFPy.hoc&#39;</span><span class="p">,</span>
-    <span class="s">&#39;tstopms&#39;</span> <span class="p">:</span>     <span class="mi">50</span><span class="p">,</span> 
+    <span class="s1">&#39;morphology&#39;</span> <span class="p">:</span>  <span class="s1">&#39;morphologies/L5_Mainen96_LFPy.hoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;tstopms&#39;</span> <span class="p">:</span>     <span class="mi">50</span><span class="p">,</span> 
 <span class="p">}</span>
 <span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="o">**</span><span class="n">cellParameters</span><span class="p">)</span>
 
 <span class="n">synapseParameters</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;idx&#39;</span> <span class="p">:</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_closest_idx</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">800</span><span class="p">),</span>
-    <span class="s">&#39;e&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>                                <span class="c"># reversal potential</span>
-    <span class="s">&#39;syntype&#39;</span> <span class="p">:</span> <span class="s">&#39;ExpSyn&#39;</span><span class="p">,</span>                   <span class="c"># synapse type</span>
-    <span class="s">&#39;tau&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>                              <span class="c"># syn. time constant</span>
-    <span class="s">&#39;weight&#39;</span> <span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>                        <span class="c"># syn. weight</span>
-    <span class="s">&#39;record_current&#39;</span> <span class="p">:</span> <span class="bp">True</span>                 <span class="c"># syn. current record</span>
+    <span class="s1">&#39;idx&#39;</span> <span class="p">:</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_closest_idx</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">800</span><span class="p">),</span>
+    <span class="s1">&#39;e&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>                                <span class="c1"># reversal potential</span>
+    <span class="s1">&#39;syntype&#39;</span> <span class="p">:</span> <span class="s1">&#39;ExpSyn&#39;</span><span class="p">,</span>                   <span class="c1"># synapse type</span>
+    <span class="s1">&#39;tau&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>                              <span class="c1"># syn. time constant</span>
+    <span class="s1">&#39;weight&#39;</span> <span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>                        <span class="c1"># syn. weight</span>
+    <span class="s1">&#39;record_current&#39;</span> <span class="p">:</span> <span class="kc">True</span>                 <span class="c1"># syn. current record</span>
 <span class="p">}</span>
 <span class="n">synapse</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Synapse</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="o">**</span><span class="n">synapseParameters</span><span class="p">)</span>
 <span class="n">synapse</span><span class="o">.</span><span class="n">set_spike_times</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">]))</span>
-<span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">rec_isyn</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">rec_isyn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tvec</span><span class="p">,</span> <span class="n">synapse</span><span class="o">.</span><span class="n">i</span><span class="p">)</span>
-<span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">&#39;Synapse current (nA)&#39;</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Synapse current (nA)&#39;</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tvec</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">somav</span><span class="p">)</span>
-<span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">&#39;Somatic potential (mV)&#39;</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Somatic potential (mV)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -687,7 +688,27 @@ currents that will be part of the membrane currents.</p>
 <dl class="method">
 <dt id="LFPy.Synapse.set_spike_times">
 <code class="descname">set_spike_times</code><span class="sig-paren">(</span><em>sptimes=array([]</em>, <em>dtype=float64)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/pointprocess.html#Synapse.set_spike_times"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.Synapse.set_spike_times" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the spike times</p>
+<dd><p>Set the spike times explicitly using numpy arrays</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="LFPy.Synapse.set_spike_times_w_netstim">
+<code class="descname">set_spike_times_w_netstim</code><span class="sig-paren">(</span><em>noise=1.0</em>, <em>start=0.0</em>, <em>number=1000.0</em>, <em>interval=10.0</em>, <em>seed=1234.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/pointprocess.html#Synapse.set_spike_times_w_netstim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.Synapse.set_spike_times_w_netstim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a train of pre-synaptic stimulus times by setting up the
+neuron NetStim object associated with this synapse</p>
+<dl class="docutils">
+<dt>noise</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float in [0, 1]</span><dd>Fractional randomness, from deterministic to intervals that drawn
+from negexp distribution (Poisson spiketimes).</dd>
+<dt>start</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>ms, (most likely) start time of first spike</dd>
+<dt>number</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">int</span><dd>(average) number of spikes</dd>
+<dt>interval</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>ms, (mean) time between spikes</dd>
+<dt>seed</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>random seed value</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -705,62 +726,62 @@ Electrode currents go here.
 Membrane currents will no longer sum to zero if these mechanisms are used.</p>
 <p>Refer to NEURON documentation &#64; neuron.yale.edu for kwargs</p>
 <p>Usage example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#/usr/bin/python</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#/usr/bin/python</span>
 
 <span class="kn">import</span> <span class="nn">LFPy</span>
-<span class="kn">import</span> <span class="nn">pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+<span class="kn">import</span> <span class="nn">pylab</span> <span class="k">as</span> <span class="nn">pl</span>
 
 <span class="n">pl</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c">#define a list of different electrode implementations from NEURON</span>
+<span class="c1">#define a list of different electrode implementations from NEURON</span>
 <span class="n">pointprocesses</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span>
-        <span class="s">&#39;idx&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s">&#39;record_current&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-        <span class="s">&#39;pptype&#39;</span> <span class="p">:</span> <span class="s">&#39;IClamp&#39;</span><span class="p">,</span>
-        <span class="s">&#39;amp&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s">&#39;dur&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-        <span class="s">&#39;delay&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;idx&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;record_current&#39;</span> <span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;pptype&#39;</span> <span class="p">:</span> <span class="s1">&#39;IClamp&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;amp&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;dur&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s1">&#39;delay&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="p">{</span>
-        <span class="s">&#39;idx&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s">&#39;record_current&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-        <span class="s">&#39;pptype&#39;</span> <span class="p">:</span> <span class="s">&#39;VClamp&#39;</span><span class="p">,</span>
-        <span class="s">&#39;amp[0]&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
-        <span class="s">&#39;dur[0]&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s">&#39;amp[1]&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s">&#39;dur[1]&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-        <span class="s">&#39;amp[2]&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
-        <span class="s">&#39;dur[2]&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;idx&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;record_current&#39;</span> <span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;pptype&#39;</span> <span class="p">:</span> <span class="s1">&#39;VClamp&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;amp[0]&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
+        <span class="s1">&#39;dur[0]&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;amp[1]&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;dur[1]&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s1">&#39;amp[2]&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
+        <span class="s1">&#39;dur[2]&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="p">{</span>
-        <span class="s">&#39;idx&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s">&#39;record_current&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-        <span class="s">&#39;pptype&#39;</span> <span class="p">:</span> <span class="s">&#39;SEClamp&#39;</span><span class="p">,</span>
-        <span class="s">&#39;dur1&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s">&#39;amp1&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
-        <span class="s">&#39;dur2&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-        <span class="s">&#39;amp2&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s">&#39;dur3&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s">&#39;amp3&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
+        <span class="s1">&#39;idx&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;record_current&#39;</span> <span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;pptype&#39;</span> <span class="p">:</span> <span class="s1">&#39;SEClamp&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;dur1&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;amp1&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
+        <span class="s1">&#39;dur2&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s1">&#39;amp2&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;dur3&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;amp3&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">65</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">]</span>
 
-<span class="c">#create a cell instance for each electrode</span>
+<span class="c1">#create a cell instance for each electrode</span>
 <span class="k">for</span> <span class="n">pointprocess</span> <span class="ow">in</span> <span class="n">pointprocesses</span><span class="p">:</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s">&#39;morphologies/L5_Mainen96_LFPy.hoc&#39;</span><span class="p">)</span>
+    <span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">morphology</span><span class="o">=</span><span class="s1">&#39;morphologies/L5_Mainen96_LFPy.hoc&#39;</span><span class="p">)</span>
     <span class="n">stimulus</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">StimIntElectrode</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="o">**</span><span class="n">pointprocess</span><span class="p">)</span>
-    <span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">rec_istim</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">rec_istim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     
     <span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tvec</span><span class="p">,</span> <span class="n">stimulus</span><span class="o">.</span><span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">pointprocess</span><span class="p">[</span><span class="s">&#39;pptype&#39;</span><span class="p">])</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">&#39;best&#39;</span><span class="p">)</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">&#39;Stimulus currents (nA)&#39;</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tvec</span><span class="p">,</span> <span class="n">stimulus</span><span class="o">.</span><span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">pointprocess</span><span class="p">[</span><span class="s1">&#39;pptype&#39;</span><span class="p">])</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Stimulus currents (nA)&#39;</span><span class="p">)</span>
     
     <span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tvec</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">somav</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">pointprocess</span><span class="p">[</span><span class="s">&#39;pptype&#39;</span><span class="p">])</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">&#39;best&#39;</span><span class="p">)</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">&#39;Somatic potential (mV)&#39;</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">tvec</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">somav</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">pointprocess</span><span class="p">[</span><span class="s1">&#39;pptype&#39;</span><span class="p">])</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Somatic potential (mV)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -782,7 +803,7 @@ Membrane currents will no longer sum to zero if these mechanisms are used.</p>
 <h2>class <a class="reference internal" href="#LFPy.RecExtElectrodeSetup" title="LFPy.RecExtElectrodeSetup"><code class="xref py py-class docutils literal"><span class="pre">RecExtElectrodeSetup</span></code></a><a class="headerlink" href="#class-recextelectrodesetup" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="LFPy.RecExtElectrodeSetup">
-<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrodeSetup</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=None</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrodeSetup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrodeSetup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrodeSetup</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=None</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrodeSetup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrodeSetup" title="Permalink to this definition">¶</a></dt>
 <dd><p>RecExtElectrode superclass. 
 If (optional) cell argument is given then the it is imported,
 otherwise the cell argument has to be passed later on to calc_lfp.
@@ -790,33 +811,33 @@ The argument cell can be an LFPy.cell.Cell or LFPy.templatecell.TemplateCell
 object
 Keyword arguments determine properties of later LFP-calculations</p>
 <p>Arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>cell : object,
-    LFPy.cell.Cell or LFPy.templatecell.TemplateCell
-sigma : float,
-    extracellular conductivity
-x, y, z : np.ndarray,
-    coordinates or arrays of coordinates. Must be same length
-N : np.ndarray,
-    Normal vector [x, y, z] of contact surface, default None
-r : float,
-    radius of contact surface, default None
-n : int,
-    if N is not None and r &gt; 0, the number of points to use for each
-          contact point in order to calculate average
-method : str,
-    [&#39;linesource&#39;]/&#39;pointsource&#39;/&#39;som_as_point&#39; switch
-color : str,
-    color of electrode contact points in plots
-marker : str,
-    marker of electrode contact points in plots
-from_file : Bool,
-    if True, load cell object from file
-cellfile : str,
-    path to cell pickle
-verbose : Bool,
-    Flag for verbose output
-seedvalue : int,
-    rand seed when finding random position on contact with r &gt;0
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span> <span class="p">:</span> <span class="nb">object</span><span class="p">,</span>
+    <span class="n">LFPy</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">Cell</span> <span class="ow">or</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">templatecell</span><span class="o">.</span><span class="n">TemplateCell</span>
+<span class="n">sigma</span> <span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">extracellular</span> <span class="n">conductivity</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">coordinates</span> <span class="ow">or</span> <span class="n">arrays</span> <span class="n">of</span> <span class="n">coordinates</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="n">same</span> <span class="n">length</span>
+<span class="n">N</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">Normal</span> <span class="n">vector</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span> <span class="n">of</span> <span class="n">contact</span> <span class="n">surface</span><span class="p">,</span> <span class="n">default</span> <span class="kc">None</span>
+<span class="n">r</span> <span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">radius</span> <span class="n">of</span> <span class="n">contact</span> <span class="n">surface</span><span class="p">,</span> <span class="n">default</span> <span class="kc">None</span>
+<span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">points</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">each</span>
+          <span class="n">contact</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">calculate</span> <span class="n">average</span>
+<span class="n">method</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">[</span><span class="s1">&#39;linesource&#39;</span><span class="p">]</span><span class="o">/</span><span class="s1">&#39;pointsource&#39;</span><span class="o">/</span><span class="s1">&#39;som_as_point&#39;</span> <span class="n">switch</span>
+<span class="n">color</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">color</span> <span class="n">of</span> <span class="n">electrode</span> <span class="n">contact</span> <span class="n">points</span> <span class="ow">in</span> <span class="n">plots</span>
+<span class="n">marker</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">marker</span> <span class="n">of</span> <span class="n">electrode</span> <span class="n">contact</span> <span class="n">points</span> <span class="ow">in</span> <span class="n">plots</span>
+<span class="n">from_file</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">,</span>
+    <span class="k">if</span> <span class="kc">True</span><span class="p">,</span> <span class="n">load</span> <span class="n">cell</span> <span class="nb">object</span> <span class="kn">from</span> <span class="nn">file</span>
+<span class="n">cellfile</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">path</span> <span class="n">to</span> <span class="n">cell</span> <span class="n">pickle</span>
+<span class="n">verbose</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">,</span>
+    <span class="n">Flag</span> <span class="k">for</span> <span class="n">verbose</span> <span class="n">output</span>
+<span class="n">seedvalue</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">rand</span> <span class="n">seed</span> <span class="n">when</span> <span class="n">finding</span> <span class="n">random</span> <span class="n">position</span> <span class="n">on</span> <span class="n">contact</span> <span class="k">with</span> <span class="n">r</span> <span class="o">&gt;</span><span class="mi">0</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -826,57 +847,57 @@ seedvalue : int,
 <h2>class <a class="reference internal" href="#LFPy.RecExtElectrode" title="LFPy.RecExtElectrode"><code class="xref py py-class docutils literal"><span class="pre">RecExtElectrode</span></code></a><a class="headerlink" href="#class-recextelectrode" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="LFPy.RecExtElectrode">
-<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrode</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=0</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrode</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=0</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">LFPy.recextelectrode.RecExtElectrodeSetup</span></code></p>
 <p>RecExtElectrode class with inheritance from LFPy.RecExtElectrodeSetup 
 able to actually calculate local field potentials from LFPy.Cell objects.</p>
 <p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre>import numpy as np
-import import matplotlib.pyplot as plt
-import LFPy
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">import</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">LFPy</span>
 
-N = np.empty((16, 3))
-for i in xrange(N.shape[0]): N[i,] = [1, 0, 0] #normal vec. of contacts
-electrodeParameters = {         #parameters for RecExtElectrode class
-    &#39;sigma&#39; : 0.3,              #Extracellular potential
-    &#39;x&#39; : np.zeros(16)+25,      #Coordinates of electrode contacts
-    &#39;y&#39; : np.zeros(16),
-    &#39;z&#39; : np.linspace(-500,1000,16),
-    &#39;n&#39; : 20,
-    &#39;r&#39; : 10,
-    &#39;N&#39; : N,
-}
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">N</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span> <span class="n">N</span><span class="p">[</span><span class="n">i</span><span class="p">,]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1">#normal vec. of contacts</span>
+<span class="n">electrodeParameters</span> <span class="o">=</span> <span class="p">{</span>         <span class="c1">#parameters for RecExtElectrode class</span>
+    <span class="s1">&#39;sigma&#39;</span> <span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>              <span class="c1">#Extracellular potential</span>
+    <span class="s1">&#39;x&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="o">+</span><span class="mi">25</span><span class="p">,</span>      <span class="c1">#Coordinates of electrode contacts</span>
+    <span class="s1">&#39;y&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span>
+    <span class="s1">&#39;z&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">500</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span>
+    <span class="s1">&#39;n&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s1">&#39;r&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;N&#39;</span> <span class="p">:</span> <span class="n">N</span><span class="p">,</span>
+<span class="p">}</span>
 
-cellParameters = {                          
-    &#39;morphology&#39; : &#39;L5_Mainen96_LFPy.hoc&#39;,  # morphology file
-    &#39;rm&#39; : 30000,                           # membrane resistivity
-    &#39;cm&#39; : 1.0,                             # membrane capacitance
-    &#39;Ra&#39; : 150,                             # axial resistivity
-    &#39;timeres_NEURON&#39; : 2**-4,                # dt for NEURON sim.
-    &#39;timeres_python&#39; : 2**-4,                 # dt for python output
-    &#39;tstartms&#39; : -50,                         # start t of simulation
-    &#39;tstopms&#39; : 50,                        # end t of simulation
-}
+<span class="n">cellParameters</span> <span class="o">=</span> <span class="p">{</span>                          
+    <span class="s1">&#39;morphology&#39;</span> <span class="p">:</span> <span class="s1">&#39;L5_Mainen96_LFPy.hoc&#39;</span><span class="p">,</span>  <span class="c1"># morphology file</span>
+    <span class="s1">&#39;rm&#39;</span> <span class="p">:</span> <span class="mi">30000</span><span class="p">,</span>                           <span class="c1"># membrane resistivity</span>
+    <span class="s1">&#39;cm&#39;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>                             <span class="c1"># membrane capacitance</span>
+    <span class="s1">&#39;Ra&#39;</span> <span class="p">:</span> <span class="mi">150</span><span class="p">,</span>                             <span class="c1"># axial resistivity</span>
+    <span class="s1">&#39;timeres_NEURON&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="o">**-</span><span class="mi">4</span><span class="p">,</span>                <span class="c1"># dt for NEURON sim.</span>
+    <span class="s1">&#39;timeres_python&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="o">**-</span><span class="mi">4</span><span class="p">,</span>                 <span class="c1"># dt for python output</span>
+    <span class="s1">&#39;tstartms&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>                         <span class="c1"># start t of simulation</span>
+    <span class="s1">&#39;tstopms&#39;</span> <span class="p">:</span> <span class="mi">50</span><span class="p">,</span>                        <span class="c1"># end t of simulation</span>
+<span class="p">}</span>
 
-cell = LFPy.Cell(**cellParameters)
+<span class="n">cell</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="o">**</span><span class="n">cellParameters</span><span class="p">)</span>
 
-synapseParameters = {
-    &#39;idx&#39; : cell.get_closest_idx(x=0, y=0, z=800), # compartment
-    &#39;e&#39; : 0,                                # reversal potential
-    &#39;syntype&#39; : &#39;ExpSyn&#39;,                   # synapse type
-    &#39;tau&#39; : 2,                              # syn. time constant
-    &#39;weight&#39; : 0.01,                       # syn. weight
-    &#39;record_current&#39; : True                 # syn. current record
-}
+<span class="n">synapseParameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;idx&#39;</span> <span class="p">:</span> <span class="n">cell</span><span class="o">.</span><span class="n">get_closest_idx</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">800</span><span class="p">),</span> <span class="c1"># compartment</span>
+    <span class="s1">&#39;e&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>                                <span class="c1"># reversal potential</span>
+    <span class="s1">&#39;syntype&#39;</span> <span class="p">:</span> <span class="s1">&#39;ExpSyn&#39;</span><span class="p">,</span>                   <span class="c1"># synapse type</span>
+    <span class="s1">&#39;tau&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>                              <span class="c1"># syn. time constant</span>
+    <span class="s1">&#39;weight&#39;</span> <span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>                       <span class="c1"># syn. weight</span>
+    <span class="s1">&#39;record_current&#39;</span> <span class="p">:</span> <span class="kc">True</span>                 <span class="c1"># syn. current record</span>
+<span class="p">}</span>
 
-synapse = LFPy.PointProcessSynapse(cell, **synapseParameters)
-synapse.set_spike_times(cell, np.array([10, 15, 20, 25]))
+<span class="n">synapse</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">PointProcessSynapse</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="o">**</span><span class="n">synapseParameters</span><span class="p">)</span>
+<span class="n">synapse</span><span class="o">.</span><span class="n">set_spike_times</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">]))</span>
 
-cell.simulate()
+<span class="n">cell</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
 
-electrode = LFPy.RecExtElectrode(cell, **electrodeParameters)
-electrode.calc_lfp()
-plt.matshow(electrode.LFP)
+<span class="n">electrode</span> <span class="o">=</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">RecExtElectrode</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="o">**</span><span class="n">electrodeParameters</span><span class="p">)</span>
+<span class="n">electrode</span><span class="o">.</span><span class="n">calc_lfp</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">electrode</span><span class="o">.</span><span class="n">LFP</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -902,73 +923,73 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.</p>
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_choose">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_choose</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em>, <em>method='linesource'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_choose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_choose" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_choose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_choose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine which method to use, line-source for soma default</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>cell: LFPy.Cell or LFPy.TemplateCell instance
-x : double, extracellular position, x-axis
-y : double, extracellular position, y-axis
-z : double, extracellular position, z-axis
-sigma : double, extracellular conductivity
-r_limit : [None]/float/np.ndarray: minimum distance to source current
-timestep : [None]/int, calculate LFP at this timestep
-t_indices : [None]/np.ndarray, calculate LFP at specific timesteps
-method=[&#39;linesource&#39;]/&#39;pointsource&#39;/&#39;som_as_point&#39;
-    switch for choosing underlying methods
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span><span class="p">:</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span> <span class="ow">or</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">TemplateCell</span> <span class="n">instance</span>
+<span class="n">x</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">y</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">z</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">z</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">sigma</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">conductivity</span>
+<span class="n">r_limit</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">float</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span> <span class="n">minimum</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">source</span> <span class="n">current</span>
+<span class="n">timestep</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">int</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">this</span> <span class="n">timestep</span>
+<span class="n">t_indices</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">specific</span> <span class="n">timesteps</span>
+<span class="n">method</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;linesource&#39;</span><span class="p">]</span><span class="o">/</span><span class="s1">&#39;pointsource&#39;</span><span class="o">/</span><span class="s1">&#39;som_as_point&#39;</span>
+    <span class="n">switch</span> <span class="k">for</span> <span class="n">choosing</span> <span class="n">underlying</span> <span class="n">methods</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_linesource">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_linesource</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_linesource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_linesource" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_linesource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_linesource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate electric field potential using the line-source method, all
 compartments treated as line sources, even soma.</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>cell: LFPy.Cell or LFPy.TemplateCell instance
-x : double, extracellular position, x-axis
-y : double, extracellular position, y-axis
-z : double, extracellular position, z-axis
-sigma : double, extracellular conductivity
-r_limit : [None]/float/np.ndarray: minimum distance to source current
-timestep : [None]/int, calculate LFP at this timestep
-t_indices : [None]/np.ndarray, calculate LFP at specific timesteps
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span><span class="p">:</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span> <span class="ow">or</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">TemplateCell</span> <span class="n">instance</span>
+<span class="n">x</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">y</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">z</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">z</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">sigma</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">conductivity</span>
+<span class="n">r_limit</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">float</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span> <span class="n">minimum</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">source</span> <span class="n">current</span>
+<span class="n">timestep</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">int</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">this</span> <span class="n">timestep</span>
+<span class="n">t_indices</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">specific</span> <span class="n">timesteps</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_pointsource">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_pointsource</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_pointsource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_pointsource" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_pointsource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_pointsource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate local field potentials using the point-source equation on all
 compartments</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>cell: LFPy.Cell or LFPy.TemplateCell instance
-x : double, extracellular position, x-axis
-y : double, extracellular position, y-axis
-z : double, extracellular position, z-axis
-sigma : double, extracellular conductivity
-r_limit : [None]/float/np.ndarray: minimum distance to source current
-timestep : [None]/int, calculate LFP at this timestep
-t_indices : [None]/np.ndarray, calculate LFP at specific timesteps
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span><span class="p">:</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span> <span class="ow">or</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">TemplateCell</span> <span class="n">instance</span>
+<span class="n">x</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">y</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">z</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">z</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">sigma</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">conductivity</span>
+<span class="n">r_limit</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">float</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span> <span class="n">minimum</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">source</span> <span class="n">current</span>
+<span class="n">timestep</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">int</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">this</span> <span class="n">timestep</span>
+<span class="n">t_indices</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">specific</span> <span class="n">timesteps</span>    
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="LFPy.lfpcalc.calc_lfp_som_as_point">
-<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_som_as_point</code><span class="sig-paren">(</span><em>cell</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>sigma=0.3</em>, <em>r_limit=None</em>, <em>timestep=None</em>, <em>t_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/lfpcalc.html#calc_lfp_som_as_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_som_as_point" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">LFPy.lfpcalc.</code><code class="descname">calc_lfp_som_as_point</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LFPy.lfpcalc.calc_lfp_som_as_point" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate electric field potential using the line-source method,
 soma is treated as point/sphere source</p>
 <p>kwargs:</p>
-<div class="highlight-python"><div class="highlight"><pre>cell: LFPy.Cell or LFPy.TemplateCell instance
-x : double, extracellular position, x-axis
-y : double, extracellular position, y-axis
-z : double, extracellular position, z-axis
-sigma : double, extracellular conductivity
-r_limit : [None]/float/np.ndarray: minimum distance to source current
-timestep : [None]/int, calculate LFP at this timestep
-t_indices : [None]/np.ndarray, calculate LFP at specific timesteps
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cell</span><span class="p">:</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">Cell</span> <span class="ow">or</span> <span class="n">LFPy</span><span class="o">.</span><span class="n">TemplateCell</span> <span class="n">instance</span>
+<span class="n">x</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">y</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">z</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">position</span><span class="p">,</span> <span class="n">z</span><span class="o">-</span><span class="n">axis</span>
+<span class="n">sigma</span> <span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">extracellular</span> <span class="n">conductivity</span>
+<span class="n">r_limit</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">float</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span> <span class="n">minimum</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">source</span> <span class="n">current</span>
+<span class="n">timestep</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="nb">int</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">this</span> <span class="n">timestep</span>
+<span class="n">t_indices</span> <span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">LFP</span> <span class="n">at</span> <span class="n">specific</span> <span class="n">timesteps</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -998,7 +1019,7 @@ GNU General Public License for more details.</p>
 the cumulative sum of gaussian white noise, with rms weight.</p>
 <p>If filter is not None, this function will apply the filter coefficients obtained
 by:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="o">**</span><span class="n">filterargs</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="o">**</span><span class="n">filterargs</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">signal</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">lfilter</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">signal</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1116,9 +1137,6 @@ GNU General Public License for more details.</p>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1137,13 +1155,13 @@ GNU General Public License for more details.</p>
         <li class="right" >
           <a href="additional.html" title="Notes on LFPy"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking
