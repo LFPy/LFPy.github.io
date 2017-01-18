@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module LFPy &mdash; LFPy 1.1.2 documentation</title>
+    <title>Module LFPy &#8212; LFPy 1.1.3 documentation</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,16 +14,18 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1.2',
+        VERSION:     '1.1.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="LFPy 1.1.2 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Notes on LFPy" href="additional.html" />
  
 <script type="text/javascript">
@@ -47,7 +49,7 @@
         <li class="right" >
           <a href="additional.html" title="Notes on LFPy"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.3 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -59,10 +61,10 @@
   <div class="section" id="module-LFPy">
 <span id="module-lfpy"></span><h1>Module <a class="reference internal" href="#module-LFPy" title="LFPy"><code class="xref py py-mod docutils literal"><span class="pre">LFPy</span></code></a><a class="headerlink" href="#module-LFPy" title="Permalink to this headline">¶</a></h1>
 <p>Initialization of LFPy, a module for simulating extracellular potentials.</p>
-<p>Group of Computational Neuroscience (compneuro.umb.no),
+<p>Group of Computational Neuroscience,
 Department of Mathematical Sciences and Technology,
 Norwegian University of Life Sciences.</p>
-<p>Copyright (C) 2012 Computational Neuroscience Group, UMB.</p>
+<p>Copyright (C) 2012 Computational Neuroscience Group, NMBU.</p>
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -696,19 +698,20 @@ currents that will be part of the membrane currents.</p>
 <code class="descname">set_spike_times_w_netstim</code><span class="sig-paren">(</span><em>noise=1.0</em>, <em>start=0.0</em>, <em>number=1000.0</em>, <em>interval=10.0</em>, <em>seed=1234.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/pointprocess.html#Synapse.set_spike_times_w_netstim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.Synapse.set_spike_times_w_netstim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a train of pre-synaptic stimulus times by setting up the
 neuron NetStim object associated with this synapse</p>
-<dl class="docutils">
-<dt>noise</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">float in [0, 1]</span><dd>Fractional randomness, from deterministic to intervals that drawn
-from negexp distribution (Poisson spiketimes).</dd>
-<dt>start</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>ms, (most likely) start time of first spike</dd>
-<dt>number</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">int</span><dd>(average) number of spikes</dd>
-<dt>interval</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>ms, (mean) time between spikes</dd>
-<dt>seed</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>random seed value</dd>
-</dl>
+<p>kwargs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">noise</span> <span class="p">:</span> <span class="nb">float</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">Fractional</span> <span class="n">randomness</span><span class="p">,</span> <span class="kn">from</span> <span class="nn">deterministic</span> <span class="n">to</span> <span class="n">intervals</span> <span class="n">that</span> <span class="n">drawn</span>
+    <span class="kn">from</span> <span class="nn">negexp</span> <span class="n">distribution</span> <span class="p">(</span><span class="n">Poisson</span> <span class="n">spiketimes</span><span class="p">)</span><span class="o">.</span>
+<span class="n">start</span> <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">ms</span><span class="p">,</span> <span class="p">(</span><span class="n">most</span> <span class="n">likely</span><span class="p">)</span> <span class="n">start</span> <span class="n">time</span> <span class="n">of</span> <span class="n">first</span> <span class="n">spike</span>
+<span class="n">number</span> <span class="p">:</span> <span class="nb">int</span>
+    <span class="p">(</span><span class="n">average</span><span class="p">)</span> <span class="n">number</span> <span class="n">of</span> <span class="n">spikes</span>
+<span class="n">interval</span> <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">ms</span><span class="p">,</span> <span class="p">(</span><span class="n">mean</span><span class="p">)</span> <span class="n">time</span> <span class="n">between</span> <span class="n">spikes</span>
+<span class="n">seed</span> <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">random</span> <span class="n">seed</span> <span class="n">value</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -803,7 +806,7 @@ Membrane currents will no longer sum to zero if these mechanisms are used.</p>
 <h2>class <a class="reference internal" href="#LFPy.RecExtElectrodeSetup" title="LFPy.RecExtElectrodeSetup"><code class="xref py py-class docutils literal"><span class="pre">RecExtElectrodeSetup</span></code></a><a class="headerlink" href="#class-recextelectrodesetup" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="LFPy.RecExtElectrodeSetup">
-<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrodeSetup</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=None</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrodeSetup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrodeSetup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrodeSetup</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=None</em>, <em>shape=None</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrodeSetup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrodeSetup" title="Permalink to this definition">¶</a></dt>
 <dd><p>RecExtElectrode superclass. 
 If (optional) cell argument is given then the it is imported,
 otherwise the cell argument has to be passed later on to calc_lfp.
@@ -824,6 +827,9 @@ Keyword arguments determine properties of later LFP-calculations</p>
 <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="k">if</span> <span class="n">N</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">points</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">each</span>
           <span class="n">contact</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">calculate</span> <span class="n">average</span>
+<span class="n">shape</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="s1">&#39;circle&#39;</span><span class="o">/</span><span class="s1">&#39;square&#39;</span> <span class="p">(</span><span class="n">default</span> <span class="s1">&#39;circle&#39;</span><span class="p">)</span> <span class="n">defines</span> <span class="n">the</span> <span class="n">contact</span> <span class="n">point</span> <span class="n">shape</span>
+          <span class="n">If</span> <span class="s1">&#39;circle&#39;</span> <span class="n">r</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">radius</span><span class="p">,</span> <span class="k">if</span> <span class="s1">&#39;square&#39;</span> <span class="n">r</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">side</span> <span class="n">length</span>
 <span class="n">method</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="p">[</span><span class="s1">&#39;linesource&#39;</span><span class="p">]</span><span class="o">/</span><span class="s1">&#39;pointsource&#39;</span><span class="o">/</span><span class="s1">&#39;som_as_point&#39;</span> <span class="n">switch</span>
 <span class="n">color</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -847,7 +853,7 @@ Keyword arguments determine properties of later LFP-calculations</p>
 <h2>class <a class="reference internal" href="#LFPy.RecExtElectrode" title="LFPy.RecExtElectrode"><code class="xref py py-class docutils literal"><span class="pre">RecExtElectrode</span></code></a><a class="headerlink" href="#class-recextelectrode" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="LFPy.RecExtElectrode">
-<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrode</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=0</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">LFPy.</code><code class="descname">RecExtElectrode</code><span class="sig-paren">(</span><em>cell=None</em>, <em>sigma=0.3</em>, <em>x=array([0])</em>, <em>y=array([0])</em>, <em>z=array([0])</em>, <em>N=None</em>, <em>r=None</em>, <em>n=0</em>, <em>shape=None</em>, <em>r_z=None</em>, <em>perCellLFP=False</em>, <em>method='linesource'</em>, <em>color='g'</em>, <em>marker='o'</em>, <em>from_file=False</em>, <em>cellfile=None</em>, <em>verbose=False</em>, <em>seedvalue=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LFPy/recextelectrode.html#RecExtElectrode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LFPy.RecExtElectrode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">LFPy.recextelectrode.RecExtElectrodeSetup</span></code></p>
 <p>RecExtElectrode class with inheritance from LFPy.RecExtElectrodeSetup 
 able to actually calculate local field potentials from LFPy.Cell objects.</p>
@@ -912,7 +918,7 @@ Will chose distributed calculated if electrode contain &#8216;n&#8217;, &#8216;N
 </div>
 <div class="section" id="module-LFPy.lfpcalc">
 <span id="submodule-lfpcalc"></span><h2>submodule <code class="xref py py-mod docutils literal"><span class="pre">lfpcalc</span></code><a class="headerlink" href="#module-LFPy.lfpcalc" title="Permalink to this headline">¶</a></h2>
-<p>Copyright (C) 2012 Computational Neuroscience Group, UMB.</p>
+<p>Copyright (C) 2012 Computational Neuroscience Group, NMBU.</p>
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -997,7 +1003,7 @@ soma is treated as point/sphere source</p>
 </div>
 <div class="section" id="module-LFPy.tools">
 <span id="submodule-tools"></span><h2>submodule <code class="xref py py-mod docutils literal"><span class="pre">tools</span></code><a class="headerlink" href="#module-LFPy.tools" title="Permalink to this headline">¶</a></h2>
-<p>Copyright (C) 2012 Computational Neuroscience Group, UMB.</p>
+<p>Copyright (C) 2012 Computational Neuroscience Group, NMBU.</p>
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -1028,7 +1034,7 @@ by:</p>
 </div>
 <div class="section" id="module-LFPy.inputgenerators">
 <span id="submodule-inputgenerators"></span><h2>submodule <code class="xref py py-mod docutils literal"><span class="pre">inputgenerators</span></code><a class="headerlink" href="#module-LFPy.inputgenerators" title="Permalink to this headline">¶</a></h2>
-<p>Copyright (C) 2012 Computational Neuroscience Group, UMB.</p>
+<p>Copyright (C) 2012 Computational Neuroscience Group, NMBU.</p>
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -1083,7 +1089,7 @@ between tstart and tstop</p>
 </div>
 <div class="section" id="module-LFPy.run_simulation">
 <span id="submodule-run-simulation"></span><h2>submodule <code class="xref py py-mod docutils literal"><span class="pre">run_simulation</span></code><a class="headerlink" href="#module-LFPy.run_simulation" title="Permalink to this headline">¶</a></h2>
-<p>Copyright (C) 2012 Computational Neuroscience Group, UMB.</p>
+<p>Copyright (C) 2012 Computational Neuroscience Group, NMBU.</p>
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -1125,15 +1131,15 @@ GNU General Public License for more details.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/classes.txt"
+      <li><a href="_sources/classes.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -1155,13 +1161,13 @@ GNU General Public License for more details.</p>
         <li class="right" >
           <a href="additional.html" title="Notes on LFPy"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LFPy 1.1.3 documentation</a> &#187;</li> 
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Computational Neuroscience Group, NMBU.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+        &#169; Copyright 2015, Computational Neuroscience Group, NMBU.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
 <!--<div class="footer">This page uses <a href="http://analytics.google.com/">
 Google Analytics</a> to collect statistics. You can disable it by blocking
